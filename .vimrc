@@ -14,6 +14,8 @@ Plugin 'elzr/vim-json'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-surround'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'AutoComplPop'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -126,3 +128,6 @@ if !exists(":DiffOrig")
   command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
 		  \ | wincmd p | diffthis
 endif
+
+" enable line numbers
+set nu
