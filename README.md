@@ -1,2 +1,9 @@
 dotfiles
 ========
+
+Usage
+-----
+
+```
+./converge.sh
+```
