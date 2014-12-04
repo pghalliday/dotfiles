@@ -101,6 +101,9 @@ if has("autocmd")
   augroup vimrcEx
   au!
 
+  " Use actual tab chars in Makefiles.
+  autocmd FileType make set tabstop=8 shiftwidth=8 softtabstop=0 noexpandtab
+
   " For all text files set 'textwidth' to 78 characters.
   autocmd FileType text setlocal textwidth=78
 
@@ -132,3 +135,12 @@ endif
 
 " enable line numbers
 set nu
+
+" For everything else, use a tab width of 4 space chars.
+set tabstop=2       " The width of a TAB is set to 2.
+                    " Still it is a \t. It is just that
+                    " Vim will interpret it to be having
+                    " a width of 2.
+set shiftwidth=2    " Indents will have a width of 2.
+set softtabstop=2   " Sets the number of columns for a TAB.
+set expandtab       " Expand TABs to spaces.
