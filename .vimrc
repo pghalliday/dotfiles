@@ -146,5 +146,8 @@ set shiftwidth=2    " Indents will have a width of 2.
 set softtabstop=2   " Sets the number of columns for a TAB.
 set expandtab       " Expand TABs to spaces.
 
-" Open NERDTreeTabs on started
+" NERDtree options
+let NERDTreeShowHidden=1
+
+" NERDTreeTabs options
 let g:nerdtree_tabs_open_on_console_startup=1
