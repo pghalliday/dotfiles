@@ -6,4 +6,7 @@ then
 	git clone https://github.com/gmarik/Vundle.vim.git $VUNDLE_INSTALL_DIR
 fi
 ln -fs $BASEDIR/.vimrc ~/
+mkdir -p ~/.vim/backup
+mkdir -p ~/.vim/swap
+mkdir -p ~/.vim/undo
 vim +PluginInstall +qall
