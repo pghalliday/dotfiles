@@ -156,3 +156,6 @@ let g:nerdtree_tabs_open_on_console_startup=1
 set backupdir=~/.vim/backup//
 set directory=~/.vim/swap//
 set undodir=~/.vim/undo//
+
+" Set the default color scheme
+colorscheme slate
