@@ -19,6 +19,7 @@ Plugin 'AutoComplPop'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'tomasr/molokai'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -159,5 +160,4 @@ set directory=~/.vim/swap//
 set undodir=~/.vim/undo//
 
 " Set the default color scheme
-set background=dark
-colorscheme solarized
+colorscheme molokai
