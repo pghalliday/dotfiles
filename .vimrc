@@ -22,6 +22,7 @@ Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'tomasr/molokai'
 Plugin 'chriskempson/base16-vim'
+Plugin 'noahfrederick/vim-noctu'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -162,7 +163,12 @@ set directory=~/.vim/swap//
 set undodir=~/.vim/undo//
 
 " Set the default color scheme
-let base16colorspace="256"
-set t_Co=256
-set background=dark
-colorscheme base16-tomorrow
+if &term == "linux"
+  set t_Co=16
+  colorscheme noctu
+else
+  let base16colorspace="256"
+  set t_Co=256
+  set background=dark
+  colorscheme base16-tomorrow
+endif
