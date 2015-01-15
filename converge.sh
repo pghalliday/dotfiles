@@ -43,6 +43,9 @@ fi
 # tmux configuration (also see bash_aliases.d/tmux.sh)
 cp -f $BASEDIR/.tmux.conf ~/
 
+# tmuxomatic sessions (also see bash_aliases.d/tmuxomatic.sh)
+cp -r $BASEDIR/tmuxomatic ~/.dotfiles/
+
 # VIM configuration
 VUNDLE_INSTALL_DIR=~/.vim/bundle/Vundle.vim
 if ! [ -d "$VUNDLE_INSTALL_DIR" ]

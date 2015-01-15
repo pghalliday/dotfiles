@@ -1,0 +1,28 @@
+window helios-application-framework
+
+AAB
+AAB
+AAC
+
+  foc
+  dir ~/helios/development/helios/helios-application-framework/
+A run vim README.md
+B run h-ssh -t "cd ~/development/helios/helios-application-framework/; source ./sourceme; bash --login"
+C run git status
+A  foc
+
+window dotfiles
+
+AAB
+
+  dir ~/development/dotfiles/
+A run vim README.md
+B run git status
+A foc
+
+window scratchpad
+
+A
+
+  dir ~
+A foc
