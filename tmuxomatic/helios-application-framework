@@ -11,10 +11,3 @@ B run h-ssh -t "cd ~/development/helios/helios-application-framework/; source ./
 C run git status
 D run minicom
 A  foc
-
-window scratchpad
-
-A
-
-  dir ~
-A foc
