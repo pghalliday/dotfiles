@@ -57,3 +57,24 @@ mkdir -p ~/.vim/backup
 mkdir -p ~/.vim/swap
 mkdir -p ~/.vim/undo
 vim +PluginInstall +qall
+
+# checkout some repos
+mkdir -p ~/development
+
+DOTFILES_DIR=~/development/dotfiles
+if ! [ -d "$DOTFILES_DIR" ]
+then
+  git clone git@github.com:pghalliday/dotfiles.git $DOTFILES_DIR
+fi
+
+TASKS_DIR=~/development/tasks
+if ! [ -d "$TASKS_DIR" ]
+then
+  git clone git@github.com:pghalliday/tasks.git $TASKS_DIR
+fi
+
+JIRA_TIME_SERIES_DIR=~/development/jira-time-series
+if ! [ -d "$JIRA_TIME_SERIES_DIR" ]
+then
+  git clone git@github.com:pghalliday/jira-time-series.git $JIRA_TIME_SERIES_DIR
+fi
