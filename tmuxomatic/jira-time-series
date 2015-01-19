@@ -1,0 +1,9 @@
+window tasks
+
+AAB
+
+  foc
+  dir ~/development/jira-time-series/
+A run vim README.md
+B run git status
+A foc
