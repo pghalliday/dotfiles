@@ -125,6 +125,8 @@ if has("autocmd")
 
   augroup END
 
+  autocmd BufRead,BufNewFile *.jsm set filetype=javascript
+
 else
 
   set autoindent		" always set autoindenting on
