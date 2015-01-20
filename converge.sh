@@ -78,3 +78,9 @@ if ! [ -d "$JIRA_TIME_SERIES_DIR" ]
 then
   git clone git@github.com:pghalliday/jira-time-series.git $JIRA_TIME_SERIES_DIR
 fi
+
+GRUNT_MOCHA_TEST_DIR=~/development/grunt-mocha-test
+if ! [ -d "$GRUNT_MOCHA_TEST_DIR" ]
+then
+  git clone git@github.com:pghalliday/grunt-mocha-test.git $GRUNT_MOCHA_TEST_DIR
+fi

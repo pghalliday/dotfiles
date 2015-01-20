@@ -1,5 +1,6 @@
 alias tmux-helios-application-framework="TERM=xterm-256color tmuxomatic ~/.dotfiles/tmuxomatic/helios-application-framework"
 alias tmux-tasks="TERM=xterm-256color tmuxomatic ~/.dotfiles/tmuxomatic/tasks"
+alias tmux-grunt-mocha-test="TERM=xterm-256color tmuxomatic ~/.dotfiles/tmuxomatic/grunt-mocha-test"
 alias tmux-jira-time-series="TERM=xterm-256color tmuxomatic ~/.dotfiles/tmuxomatic/jira-time-series"
 alias tmux-dotfiles="TERM=xterm-256color tmuxomatic ~/.dotfiles/tmuxomatic/dotfiles"
 alias tmux-scratchpad="TERM=xterm-256color tmuxomatic ~/.dotfiles/tmuxomatic/scratchpad"
