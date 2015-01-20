@@ -1,9 +1,11 @@
 window tasks
 
 AAB
+AAC
 
   foc
   dir ~/development/tasks/
 A run vim README.md
-B run git status
+B run fig up
+C run git status
 A foc
