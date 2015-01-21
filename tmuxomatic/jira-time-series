@@ -7,5 +7,5 @@ AAC
   dir ~/development/jira-time-series/
 A run vim README.md
 B run git status
-C fig up
+C run fig up
 A foc
