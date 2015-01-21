@@ -15,6 +15,7 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-surround'
 Plugin 'kchmck/vim-coffee-script'
+Plugin 'mtscout6/vim-cjsx'
 Plugin 'docker/docker', {'rtp': '/contrib/syntax/vim/'}
 Plugin 'AutoComplPop'
 Plugin 'scrooloose/nerdcommenter'
