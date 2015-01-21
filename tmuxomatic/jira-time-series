@@ -1,9 +1,11 @@
 window tasks
 
 AAB
+AAC
 
   foc
   dir ~/development/jira-time-series/
 A run vim README.md
 B run git status
+C fig up
 A foc
