@@ -1,0 +1,9 @@
+window helios-development-infrastructure
+
+AAB
+
+  foc
+  dir ~/development/helios/development-infrastructure/
+A run vim README.md
+B run git status
+A foc
