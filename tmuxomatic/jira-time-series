@@ -1,13 +1,15 @@
 window tasks
 
-AAB
 AAC
 AAD
+AAD
+AAD
+BBD
 
   foc
   dir ~/development/jira-time-series/
 A run vim README.md
 B run git status
-D run fig up
-C run ./run.sh gulp test
+C run fig up
+D run ./run.sh gulp test
 A foc
