@@ -8,6 +8,6 @@ AAD
   dir ~/development/jira-time-series/
 A run vim README.md
 B run git status
-C run ./run.sh gulp test
 D run fig up
+C run ./run.sh gulp test
 A foc
