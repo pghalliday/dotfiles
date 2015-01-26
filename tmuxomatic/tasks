@@ -1,11 +1,14 @@
 window tasks
 
-AAB
 AAC
+AAD
+AAD
+BBD
 
   foc
   dir ~/development/tasks/
 A run vim README.md
-B run fig up
-C run git status
+B run git status
+C run fig up
+D run ./run.sh gulp test
 A foc
