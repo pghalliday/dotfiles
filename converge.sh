@@ -2,7 +2,7 @@
 BASEDIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd -P)
 
 rm -rf ~/.dotfiles
-mkdir -p ~/.dotfiles
+cp -r $BASEDIR/.dotfiles ~/
 
 # enable sourcing additional bashrc config files from ~/.dotfiles/bashrc.d
 if ! grep -q .dotfiles/bashrc.d ~/.bashrc; then
@@ -13,7 +13,6 @@ do . $file
 done
 EOF
 fi
-cp -r $BASEDIR/bashrc.d ~/.dotfiles/
 
 # enable sourcing additional bash_aliases config files from ~/.dotfiles/bash_aliases.d
 if ! grep -q .dotfiles/bash_aliases.d ~/.bash_aliases; then
@@ -24,7 +23,6 @@ do . $file
 done
 EOF
 fi
-cp -r $BASEDIR/bash_aliases.d ~/.dotfiles/
 
 # base16 theme configuration (also see bashrc.d/base16.sh and .vimrc)
 BASE16_SHELL_INSTALL_DIR=~/.config/base16-shell
@@ -43,9 +41,6 @@ fi
 # tmux configuration (also see bash_aliases.d/tmux.sh)
 cp -f $BASEDIR/.tmux.conf ~/
 
-# tmuxomatic sessions (also see bash_aliases.d/tmuxomatic.sh)
-cp -r $BASEDIR/tmuxomatic ~/.dotfiles/
-
 # VIM configuration
 VUNDLE_INSTALL_DIR=~/.vim/bundle/Vundle.vim
 if ! [ -d "$VUNDLE_INSTALL_DIR" ]
@@ -59,7 +54,7 @@ mkdir -p ~/.vim/undo
 vim +PluginInstall +qall
 
 # checkout some repos
-mkdir -p ~/development
+mkdir -p ~/development/spikes
 
 DOTFILES_DIR=~/development/dotfiles
 if ! [ -d "$DOTFILES_DIR" ]
