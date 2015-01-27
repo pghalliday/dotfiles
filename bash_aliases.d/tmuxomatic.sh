@@ -5,3 +5,4 @@ alias tmux-grunt-mocha-test="TERM=xterm-256color tmuxomatic ~/.dotfiles/tmuxomat
 alias tmux-jira-time-series="TERM=xterm-256color tmuxomatic ~/.dotfiles/tmuxomatic/jira-time-series"
 alias tmux-dotfiles="TERM=xterm-256color tmuxomatic ~/.dotfiles/tmuxomatic/dotfiles"
 alias tmux-spikes="TERM=xterm-256color tmuxomatic ~/.dotfiles/tmuxomatic/spikes"
+alias tmux-vim="TERM=xterm-256color tmuxomatic ~/.dotfiles/tmuxomatic/vim"
