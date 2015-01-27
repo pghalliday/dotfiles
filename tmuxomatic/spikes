@@ -1,0 +1,9 @@
+window spikes
+
+AAB
+
+  foc
+  dir ~/development/spikes/
+A run vim README.md
+B run pwd
+A foc
