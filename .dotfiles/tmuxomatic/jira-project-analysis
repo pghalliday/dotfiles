@@ -3,7 +3,7 @@ window jira-time-series
 AAB
 
   foc
-  dir ~/development/jira-time-series/
+  dir ~/development/jira-project-analysis/
 A run vim README.md
 B run git status
 A foc
