@@ -68,10 +68,10 @@ then
   git clone git@github.com:pghalliday/tasks.git $TASKS_DIR
 fi
 
-JIRA_TIME_SERIES_DIR=~/development/jira-time-series
-if ! [ -d "$JIRA_TIME_SERIES_DIR" ]
+JIRA_PROJECT_ANALYSIS_DIR=~/development/jira-project-analysis
+if ! [ -d "$JIRA_PROJECT_ANALYSIS_DIR" ]
 then
-  git clone git@github.com:pghalliday/jira-time-series.git $JIRA_TIME_SERIES_DIR
+  git clone git@github.com:pghalliday/jira-project-analysis.git $JIRA_PROJECT_ANALYSIS_DIR
 fi
 
 GRUNT_MOCHA_TEST_DIR=~/development/grunt-mocha-test
