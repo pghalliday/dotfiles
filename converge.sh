@@ -74,6 +74,12 @@ then
   git clone git@github.com:pghalliday/jira-project-analysis.git $JIRA_PROJECT_ANALYSIS_DIR
 fi
 
+HELIOS_JIRA_PROJECT_ANALYSIS_DIR=~/development/helios-jira-project-analysis
+if ! [ -d "$HELIOS_JIRA_PROJECT_ANALYSIS_DIR" ]
+then
+  git clone git@gitlab.upc.biz:phalliday/helios-jira-project-analysis.git $HELIOS_JIRA_PROJECT_ANALYSIS_DIR
+fi
+
 GRUNT_MOCHA_TEST_DIR=~/development/grunt-mocha-test
 if ! [ -d "$GRUNT_MOCHA_TEST_DIR" ]
 then
