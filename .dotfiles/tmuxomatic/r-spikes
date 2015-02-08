@@ -1,9 +1,11 @@
 window r-spikes
 
 AAB
+AAC
 
   foc
   dir ~/development/spikes/R/
 A run vim README.md
 B run R
+C run pwd
 A foc
