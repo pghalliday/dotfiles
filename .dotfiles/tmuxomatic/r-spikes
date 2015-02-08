@@ -1,0 +1,9 @@
+window r-spikes
+
+AAB
+
+  foc
+  dir ~/development/spikes/R/
+A run vim README.md
+B run R
+A foc

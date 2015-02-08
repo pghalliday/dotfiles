@@ -55,6 +55,7 @@ vim +PluginInstall +qall
 
 # checkout some repos
 mkdir -p ~/development/spikes
+mkdir -p ~/development/spikes/R
 
 DOTFILES_DIR=~/development/dotfiles
 if ! [ -d "$DOTFILES_DIR" ]

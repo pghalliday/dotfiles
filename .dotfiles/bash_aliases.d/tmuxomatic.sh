@@ -6,4 +6,5 @@ alias tmux-jira-project-analysis="TERM=xterm-256color tmuxomatic ~/.dotfiles/tmu
 alias tmux-helios-jira-project-analysis="TERM=xterm-256color tmuxomatic ~/.dotfiles/tmuxomatic/helios-jira-project-analysis"
 alias tmux-dotfiles="TERM=xterm-256color tmuxomatic ~/.dotfiles/tmuxomatic/dotfiles"
 alias tmux-spikes="TERM=xterm-256color tmuxomatic ~/.dotfiles/tmuxomatic/spikes"
+alias tmux-r-spikes="TERM=xterm-256color tmuxomatic ~/.dotfiles/tmuxomatic/r-spikes"
 alias tmux-vim="TERM=xterm-256color tmuxomatic ~/.dotfiles/tmuxomatic/vim"
