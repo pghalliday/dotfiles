@@ -7,5 +7,5 @@ AAC
   dir ~/development/shiny-jira-project-analysis/
 A run vim README.md
 B run git status
-C run cd ./shiny && R
+C run cd ./app && R
 A foc
