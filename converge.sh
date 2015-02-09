@@ -75,6 +75,12 @@ then
   git clone git@github.com:pghalliday/jira-project-analysis.git $JIRA_PROJECT_ANALYSIS_DIR
 fi
 
+SHINY_JIRA_PROJECT_ANALYSIS_DIR=~/development/shiny-jira-project-analysis
+if ! [ -d "$SHINY_JIRA_PROJECT_ANALYSIS_DIR" ]
+then
+  git clone git@github.com:pghalliday/shiny-jira-project-analysis.git $SHINY_JIRA_PROJECT_ANALYSIS_DIR
+fi
+
 HELIOS_JIRA_PROJECT_ANALYSIS_DIR=~/development/helios-jira-project-analysis
 if ! [ -d "$HELIOS_JIRA_PROJECT_ANALYSIS_DIR" ]
 then
