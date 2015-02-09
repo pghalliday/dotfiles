@@ -1,11 +1,14 @@
 window shiny-jira-project-analysis
 
-AAB
 AAC
+AAD
+AAD
+BBD
 
   foc
   dir ~/development/shiny-jira-project-analysis/
 A run vim README.md
 B run git status
-C run cd ./app && R
+C run fig up
+D run cd ./app/ && R
 A foc
