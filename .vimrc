@@ -19,6 +19,7 @@ Plugin 'mtscout6/vim-cjsx'
 Plugin 'docker/docker', {'rtp': '/contrib/syntax/vim/'}
 Plugin 'AutoComplPop'
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/syntastic'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'tomasr/molokai'
@@ -178,3 +179,17 @@ else
   set background=dark
   colorscheme base16-tomorrow
 endif
+
+" Syntastic settings
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+" TODO: lintr is not ready for real use!
+" let g:syntastic_enable_r_lintr_checker = 1
+" let g:syntastic_r_checkers = 1

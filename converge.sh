@@ -92,3 +92,8 @@ if ! [ -d "$GRUNT_MOCHA_TEST_DIR" ]
 then
   git clone git@github.com:pghalliday/grunt-mocha-test.git $GRUNT_MOCHA_TEST_DIR
 fi
+
+# install syntax checkers into syntastic
+SYNTASTIC_SYNTAX_DIR=~/.vim/bundle/syntastic/syntax_checkers
+SYNTASTIC_LINTR=$SYNTASTIC_SYNTAX_DIR/r/lintr.vim
+wget -O "$SYNTASTIC_LINTR" https://raw.githubusercontent.com/jimhester/lintr/master/inst/syntastic/lintr.vim
