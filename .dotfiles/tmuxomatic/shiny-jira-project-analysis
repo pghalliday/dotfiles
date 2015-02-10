@@ -10,5 +10,5 @@ BBD
 A run vim README.md
 B run git status
 C run fig up
-D run cd ./app/ && R
+D run R
 A foc
