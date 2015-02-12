@@ -1,6 +1,9 @@
 workstation_user = node['workstation']['user']
 workstation_group = node['workstation']['group']
 
+# make sure apt repository  is up to date
+include_recipe 'apt::default'
+
 # install keepass2 for password management
 package 'keepass2'
 
@@ -112,4 +115,44 @@ bash 'install snx' do
 #{snx_install_script}
 EOH
   action :nothing
+end
+
+# install skype
+%w{
+libqt4-dbus:i386
+libqt4-network:i386
+libqt4-xml:i386
+libqtcore4:i386
+libqtgui4:i386
+libqtwebkit4:i386
+libstdc++6:i386
+libxext6:i386
+libxss1:i386
+libxv1:i386
+libssl1.0.0:i386
+libpulse0:i386
+libasound2-plugins:i386
+}.each do |package_name|
+  package package_name
+end
+skype_deb = "#{Chef::Config[:file_cache_path]}/skype.deb"
+remote_file skype_deb do
+  source 'http://download.skype.com/linux/skype-ubuntu-precise_4.3.0.37-1_i386.deb'
+  checksum 'd19769135c014f7bdcb0c71410fd27698081c1aa4c6bbe53ccdd38576f17febc'
+end
+package 'skype' do
+  source skype_deb
+  provider Chef::Provider::Package::Dpkg
+end
+
+# install chrome
+package 'libappindicator1'
+chrome_deb = "#{Chef::Config[:file_cache_path]}/chrome.deb"
+remote_file chrome_deb do
+  source 'https://dl-ssl.google.com/linux/direct/google-chrome-stable_current_amd64.deb'
+  checksum '0a1f0a1ff5b4472430b69f48ab77bf9f535a5a87074d15410ea017d796831544'
+end
+package 'chrome' do
+  source chrome_deb
+  provider Chef::Provider::Package::Dpkg
 end
