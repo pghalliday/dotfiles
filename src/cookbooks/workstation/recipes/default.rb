@@ -1,3 +1,5 @@
+workstation_user = node['workstation']['user']
+
 # install keepass2 for password management
 package 'keepass2'
 
@@ -18,6 +20,14 @@ EOH
   not_if {Mixlib::ShellOut.new('which tmuxomatic').run_command().status == 0}
 end
 
+# install minicom
+package 'minicom'
+group "dialout" do
+  action :modify
+  members workstation_user
+  append true
+end
+
 # install docker
 package 'apt-transport-https'
 apt_repository 'docker' do
@@ -28,6 +38,11 @@ apt_repository 'docker' do
   key '36A1D7869245C8950F966E92D8576A8BA88D21E9'
 end
 package 'lxc-docker'
+group "docker" do
+  action :modify
+  members workstation_user
+  append true
+end
 
 # install virtualbox
 apt_repository 'virtualbox' do
@@ -40,7 +55,7 @@ package 'virtualbox-4.3' do
   timeout 1800
 end
 
-# install vagrant
+# install vagrant and plugins
 vagrant_deb = "#{Chef::Config[:file_cache_path]}/vagrant.deb"
 remote_file vagrant_deb do
   source 'https://dl.bintray.com/mitchellh/vagrant/vagrant_1.7.2_x86_64.deb'
