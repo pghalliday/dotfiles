@@ -4,25 +4,24 @@ dotfiles
 Prerequisites
 -------------
 
-Install curl
-
-```
-sudo apt-get install curl
-```
-
-Install chef client (including chef solo)
-
-```
-curl -L https://www.chef.io/chef/install.sh | sudo bash
-```
+Install ChefDK - https://downloads.chef.io/chef-dk/
 
 Usage
 -----
 
+To do everything in one go
+
+```
+./all.sh
+```
+
+OR on step at a time:
+
 To install packages, etc
 
 ```
-sudo chef-client -z -r workstation
+chef exec berks vendor cookbooks
+sudo chef exec chef-client -z -r workstation
 ```
 
 Then configure options
