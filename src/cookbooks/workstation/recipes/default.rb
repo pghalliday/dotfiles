@@ -1,4 +1,5 @@
 workstation_user = node['workstation']['user']
+workstation_group = node['workstation']['group']
 
 # install keepass2 for password management
 package 'keepass2'
@@ -10,8 +11,12 @@ package 'vim-gnome'
 package 'tmux'
 
 # install tmuxomatic
-package 'python3'
-package 'python3-pip'
+%w{
+  python3
+  python3-pip
+}.each do |package_name|
+  package package_name
+end
 bash 'install tmuxomatic' do
   code <<-EOH
 rm -rf /tmp/pip-build-root/
@@ -64,4 +69,47 @@ end
 package 'vagrant' do
   source vagrant_deb
   provider Chef::Provider::Package::Dpkg
+end
+vagrant_plugin_list_command = Mixlib::ShellOut.new(
+  'vagrant plugin list',
+  user: workstation_user,
+  group: workstation_group
+)
+vagrant_plugin_list_command.run_command()
+vagrant_plugin_list_command.error!
+installed_vagrant_plugins = vagrant_plugin_list_command.stdout
+%w{
+  vagrant-omnibus
+  vagrant-berkshelf
+}.each do |vagrant_plugin_name|
+  bash "vagrant plugin install #{vagrant_plugin_name}" do
+    user workstation_user
+    group workstation_group
+    code <<-EOH
+vagrant plugin install #{vagrant_plugin_name}
+EOH
+    only_if { (/^#{vagrant_plugin_name} / =~ installed_vagrant_plugins).nil? }
+  end
+end
+
+# install snx client
+%w{
+  libpam0g:i386
+  libstdc++5:i386
+  libx11-6:i386
+}.each do |package_name|
+  package package_name
+end
+snx_install_script = "#{Chef::Config[:file_cache_path]}/snx_install.sh"
+remote_file snx_install_script do
+  source 'http://vpn.upclabs.com/download/linux-vpn-cli.sh'
+  checksum '9ecba22bc3853e17b59e06860f783da084aff1e1c73827f3746e5a67d3918c08'
+  mode 0700
+  notifies :run, "bash[install snx]", :immediately
+end
+bash 'install snx' do
+  code <<-EOH
+#{snx_install_script}
+EOH
+  action :nothing
 end

@@ -15,7 +15,7 @@ To do everything in one go
 ./all.sh
 ```
 
-OR on step at a time:
+OR one step at a time:
 
 To install packages, etc
 
