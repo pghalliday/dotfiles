@@ -4,6 +4,12 @@ workstation_group = node['workstation']['group']
 # make sure apt repository  is up to date
 include_recipe 'apt::default'
 
+# install nfs client stuff
+package 'nfs-common'
+
+# install Filezilla
+package 'filezilla'
+
 # install keepass2 for password management
 package 'keepass2'
 

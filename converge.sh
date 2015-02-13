@@ -54,8 +54,8 @@ mkdir -p ~/.vim/undo
 vim +PluginInstall +qall
 
 # checkout some repos
-mkdir -p ~/development/spikes
 mkdir -p ~/development/spikes/R
+mkdir -p ~/development/helios/vm
 
 DOTFILES_DIR=~/development/dotfiles
 if ! [ -d "$DOTFILES_DIR" ]
@@ -79,6 +79,12 @@ SHINY_JIRA_PROJECT_ANALYSIS_DIR=~/development/shiny-jira-project-analysis
 if ! [ -d "$SHINY_JIRA_PROJECT_ANALYSIS_DIR" ]
 then
   git clone git@github.com:pghalliday/shiny-jira-project-analysis.git $SHINY_JIRA_PROJECT_ANALYSIS_DIR
+fi
+
+HELIOS_LOCAL_DEV_VM_SETUP_DIR=~/development/helios/local-dev-vm-setup
+if ! [ -d "$HELIOS_LOCAL_DEV_VM_SETUP_DIR" ]
+then
+  git clone git@gitlab.upc.biz:helios/local-dev-vm-setup.git $HELIOS_LOCAL_DEV_VM_SETUP_DIR
 fi
 
 HELIOS_JIRA_PROJECT_ANALYSIS_DIR=~/development/helios-jira-project-analysis
