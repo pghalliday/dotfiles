@@ -9,5 +9,5 @@ AAD
 A run vim README.md
 B run h-ssh -t "cd ~/development/helios/helios-application-framework/; source ./sourceme; bash --login"
 C run git status
-D run minicom.usb0
+D run minicom.USB0
 A  foc

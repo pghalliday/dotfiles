@@ -5,18 +5,20 @@ end
 use_inline_resources
 
 action :add do
-  vim_dir = "#{new_resource.home}/.vim"
+  home = ::Dir.home(new_resource.user)
+  group = ::Etc.getpwnam(new_resource.user).gid
+  vim_dir = "#{home}/.vim"
   vim_config = "#{vim_dir}/config.vim"
   vim_config_dir = "#{vim_dir}/config"
   config = "#{vim_config_dir}/#{new_resource.name}.vim"
   directory vim_dir do
     owner new_resource.user
-    group new_resource.group
+    group group
     mode 0755
   end
   directory vim_config_dir do
     owner new_resource.user
-    group new_resource.group
+    group group
     mode 0755
   end
   source_config = "source #{config}"
@@ -30,7 +32,7 @@ action :add do
     file vim_config do
       content source_config
       owner new_resource.user
-      group new_resource.group
+      group group
       mode 0644
     end
   end
@@ -38,7 +40,7 @@ action :add do
     cookbook new_resource.cookbook
     source new_resource.source
     owner new_resource.user
-    group new_resource.group
+    group group
     mode 0644
   end
 end

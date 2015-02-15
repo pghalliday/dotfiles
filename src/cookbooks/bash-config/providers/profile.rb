@@ -5,7 +5,9 @@ end
 use_inline_resources
 
 action :enable do
-  bash_profile = "#{new_resource.home}/.bash_profile" 
+  home = ::Dir.home(new_resource.user)
+  group = ::Etc.getpwnam(new_resource.user).gid
+  bash_profile = "#{home}/.bash_profile" 
   enable_bash_profile_lines = <<-EOH
 
 if [ -f ~/.bashrc ]; then
@@ -21,7 +23,7 @@ EOH
     file bash_profile do
       content enable_bash_profile_lines
       owner new_resource.user
-      group new_resource.group
+      group group
       mode 0644
     end
   end

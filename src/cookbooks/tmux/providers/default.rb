@@ -5,17 +5,17 @@ end
 use_inline_resources
 
 action :add do
+  home = ::Dir.home(new_resource.user)
+  group = ::Etc.getpwnam(new_resource.user).gid
   bash_config_alias 'tmux' do
     command 'tmux -2'
     user new_resource.user
-    group new_resource.group
-    home new_resource.home
   end
-  cookbook_file "#{new_resource.home}/.tmux.conf" do
+  cookbook_file "#{home}/.tmux.conf" do
     cookbook 'tmux'
     source '.tmux.conf'
     owner new_resource.user
-    group new_resource.group
+    group group
     mode 0644
   end
 end
