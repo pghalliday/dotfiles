@@ -26,7 +26,6 @@ action :add do
     fileEdit = Chef::Util::FileEdit.new(vim_config)
     fileEdit.insert_line_if_no_match(/#{Regexp.escape(source_config)}/, source_config)
     fileEdit.write_file
-    log fileEdit.file_edited?
     new_resource.updated_by_last_action(new_resource.updated_by_last_action? || fileEdit.file_edited?)
   else
     file vim_config do
