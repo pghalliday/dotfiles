@@ -1,3 +1,5 @@
 source "https://supermarket.chef.io"
 
-cookbook 'workstation', path: './src/cookbooks/workstation'
+Dir['./src/cookbooks/*'].each do |path|
+  cookbook(File.basename(path), path: path)
+end
