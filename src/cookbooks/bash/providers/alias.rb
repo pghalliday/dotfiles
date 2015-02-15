@@ -27,7 +27,9 @@ action :add do
   end
   file bash_aliasesdsh do
     content <<-EOH
-alias #{new_resource.name}="#{new_resource.command}"
+function #{new_resource.name} {
+  #{new_resource.command}
+}
 EOH
     owner new_resource.user
     group group
