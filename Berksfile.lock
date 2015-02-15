@@ -7,6 +7,8 @@ DEPENDENCIES
     path: src/cookbooks/bash-config
   bash-git-prompt
     path: src/cookbooks/bash-git-prompt
+  chefdk
+    path: src/cookbooks/chefdk
   chrome
     path: src/cookbooks/chrome
   docker
@@ -49,6 +51,8 @@ GRAPH
   bash-config (0.1.0)
   bash-git-prompt (0.1.0)
     bash-config (>= 0.0.0)
+  chefdk (0.1.0)
+    bash-config (>= 0.0.0)
   chrome (0.1.0)
   docker (0.1.0)
   dropbox (0.1.0)
@@ -76,6 +80,7 @@ GRAPH
     base16-vim (>= 0.0.0)
     bash-config (>= 0.0.0)
     bash-git-prompt (>= 0.0.0)
+    chefdk (>= 0.0.0)
     chrome (>= 0.0.0)
     docker (>= 0.0.0)
     dropbox (>= 0.0.0)

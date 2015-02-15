@@ -10,6 +10,10 @@ include_recipe 'apt::default'
 include_recipe 'bash-config::default'
 bash_config workstation_user
 
+# install chefdk
+include_recipe 'chefdk::default'
+chefdk workstation_user
+
 # install dropbox
 include_recipe 'dropbox::default'
 
