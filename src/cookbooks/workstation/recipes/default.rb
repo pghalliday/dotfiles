@@ -58,7 +58,7 @@ workstation_cookbook_files.each do |entry|
   parent_directory = ::File.basename(::File.dirname(entry['path']))
   name = entry['name']
   if parent_directory.eql? 'tmuxomatic'
-    tmuxomatic_config name do
+    tmuxomatic name do
       source "tmuxomatic/#{name}"
       user workstation_user
     end
@@ -111,3 +111,9 @@ include_recipe 'skype::default'
 
 # install chrome
 include_recipe 'chrome::default'
+
+# set up development projects
+development workstation_user
+
+# set up Helios projects
+helios workstation_user

@@ -11,18 +11,22 @@ DEPENDENCIES
     path: src/cookbooks/chefdk
   chrome
     path: src/cookbooks/chrome
+  development
+    path: src/cookbooks/development
   docker
     path: src/cookbooks/docker
   dropbox
     path: src/cookbooks/dropbox
   filezilla
     path: src/cookbooks/filezilla
+  helios
+    path: src/cookbooks/helios
   keepass2
     path: src/cookbooks/keepass2
   minicom
     path: src/cookbooks/minicom
-  projects
-    path: src/cookbooks/projects
+  project
+    path: src/cookbooks/project
   skype
     path: src/cookbooks/skype
   snx
@@ -54,14 +58,21 @@ GRAPH
   chefdk (0.1.0)
     bash-config (>= 0.0.0)
   chrome (0.1.0)
+  development (0.1.0)
+    project (>= 0.0.0)
   docker (0.1.0)
   dropbox (0.1.0)
   filezilla (0.1.0)
+  helios (0.1.0)
+    bash-config (>= 0.0.0)
+    project (>= 0.0.0)
+    tmuxomatic (>= 0.0.0)
   keepass2 (0.1.0)
   minicom (0.1.0)
     bash-config (>= 0.0.0)
-  projects (0.1.0)
+  project (0.1.0)
     bash-config (>= 0.0.0)
+    tmuxomatic (>= 0.0.0)
   skype (0.1.0)
   snx (0.1.0)
     bash-config (>= 0.0.0)
@@ -82,9 +93,11 @@ GRAPH
     bash-git-prompt (>= 0.0.0)
     chefdk (>= 0.0.0)
     chrome (>= 0.0.0)
+    development (>= 0.0.0)
     docker (>= 0.0.0)
     dropbox (>= 0.0.0)
     filezilla (>= 0.0.0)
+    helios (>= 0.0.0)
     keepass2 (>= 0.0.0)
     minicom (>= 0.0.0)
     skype (>= 0.0.0)
