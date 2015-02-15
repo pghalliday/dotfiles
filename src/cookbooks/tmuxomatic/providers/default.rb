@@ -21,7 +21,7 @@ action :add do
     group group
     mode 0644
   end
-  bash_config_alias "tmux-#{new_resource.name}" do
+  bash_alias "tmux-#{new_resource.name}" do
     command "TERM=xterm-256color tmuxomatic #{tmuxomatic_config}"
     user new_resource.user
   end

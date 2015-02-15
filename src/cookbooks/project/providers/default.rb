@@ -21,17 +21,14 @@ action :add do
     end
   end
   if !new_resource.repository.nil?
-    git_status = Mixlib::ShellOut.new(
-      "su -l #{new_resource.user} -c 'cd #{dir} && git status'"
-    )
-    git_status.run_command
-    if git_status.error?
-      git_clone = Mixlib::ShellOut.new(
-        "su -l #{new_resource.user} -c 'git clone #{new_resource.repository} #{dir}'"
-      )
-      git_clone.run_command
-      git_clone.error!
-      new_resource.updated_by_last_action(true)
+    git_clone new_resource.repository do
+      user new_resource.user
+      project_path dir
+    end
+    git_config 'user.email' do
+      user new_resource.user
+      project_path dir
+      value new_resource.email
     end
   end
 end

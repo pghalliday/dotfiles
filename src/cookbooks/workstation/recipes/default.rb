@@ -7,8 +7,14 @@ workstation_cookbook_files = workstation_cookbook.manifest['files']
 include_recipe 'apt::default'
 
 # install bash
-include_recipe 'bash-config::default'
-bash_config workstation_user
+include_recipe 'bash'
+bash_init workstation_user
+
+# install git
+include_recipe 'git::default'
+git_init workstation_user do
+  user_name 'Peter Halliday'
+end
 
 # install chefdk
 include_recipe 'chefdk::default'

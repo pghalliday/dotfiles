@@ -9,7 +9,7 @@ action :add do
   group = ::Etc.getpwnam(new_resource.user).gid
   config_dir = "#{home}/.config"
   install_dir = "#{config_dir}/base16-shell"
-  bash_config_rc 'base16-shell' do
+  bash_rc 'base16-shell' do
     cookbook 'base16-shell'
     source 'base16-shell.sh'
     user new_resource.user

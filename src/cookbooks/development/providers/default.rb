@@ -30,6 +30,7 @@ action :add do
       cookbook 'development'
       tmuxomatic "tmuxomatic/#{name}"
       repository "git@github.com:pghalliday/#{name}.git"
+      email 'pghalliday@gmail.com'
     end
   end
 end

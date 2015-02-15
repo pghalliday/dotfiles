@@ -10,8 +10,8 @@ action :add do
   config_dir = "#{home}/.bash-config"
   bash_aliasesd = "#{config_dir}/bash_aliases.d" 
   bash_aliasesdsh = "#{bash_aliasesd}/#{new_resource.name}.sh" 
-  bash_config_rc '__aliases__' do
-    cookbook 'bash-config'
+  bash_rc '__aliases__' do
+    cookbook 'bash'
     source 'aliases.sh'
     user new_resource.user
   end

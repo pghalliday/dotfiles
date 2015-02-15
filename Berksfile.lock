@@ -3,8 +3,8 @@ DEPENDENCIES
     path: src/cookbooks/base16-shell
   base16-vim
     path: src/cookbooks/base16-vim
-  bash-config
-    path: src/cookbooks/bash-config
+  bash
+    path: src/cookbooks/bash
   bash-git-prompt
     path: src/cookbooks/bash-git-prompt
   chefdk
@@ -19,6 +19,8 @@ DEPENDENCIES
     path: src/cookbooks/dropbox
   filezilla
     path: src/cookbooks/filezilla
+  git
+    path: src/cookbooks/git
   helios
     path: src/cookbooks/helios
   keepass2
@@ -49,39 +51,41 @@ DEPENDENCIES
 GRAPH
   apt (2.6.1)
   base16-shell (0.1.0)
-    bash-config (>= 0.0.0)
+    bash (>= 0.0.0)
   base16-vim (0.1.0)
     vim (>= 0.0.0)
-  bash-config (0.1.0)
+  bash (0.1.0)
   bash-git-prompt (0.1.0)
-    bash-config (>= 0.0.0)
+    bash (>= 0.0.0)
   chefdk (0.1.0)
-    bash-config (>= 0.0.0)
+    bash (>= 0.0.0)
   chrome (0.1.0)
   development (0.1.0)
     project (>= 0.0.0)
   docker (0.1.0)
   dropbox (0.1.0)
   filezilla (0.1.0)
+  git (0.1.0)
   helios (0.1.0)
-    bash-config (>= 0.0.0)
+    bash (>= 0.0.0)
     project (>= 0.0.0)
     tmuxomatic (>= 0.0.0)
   keepass2 (0.1.0)
   minicom (0.1.0)
-    bash-config (>= 0.0.0)
+    bash (>= 0.0.0)
   project (0.1.0)
-    bash-config (>= 0.0.0)
+    bash (>= 0.0.0)
+    git (>= 0.0.0)
     tmuxomatic (>= 0.0.0)
   skype (0.1.0)
   snx (0.1.0)
-    bash-config (>= 0.0.0)
+    bash (>= 0.0.0)
   syntastic (0.1.0)
     vim (>= 0.0.0)
   tmux (0.1.0)
-    bash-config (>= 0.0.0)
+    bash (>= 0.0.0)
   tmuxomatic (0.1.0)
-    bash-config (>= 0.0.0)
+    bash (>= 0.0.0)
   vagrant (0.1.0)
   vim (0.1.0)
   virtualbox (0.1.0)
@@ -89,7 +93,7 @@ GRAPH
     apt (>= 0.0.0)
     base16-shell (>= 0.0.0)
     base16-vim (>= 0.0.0)
-    bash-config (>= 0.0.0)
+    bash (>= 0.0.0)
     bash-git-prompt (>= 0.0.0)
     chefdk (>= 0.0.0)
     chrome (>= 0.0.0)
@@ -97,6 +101,7 @@ GRAPH
     docker (>= 0.0.0)
     dropbox (>= 0.0.0)
     filezilla (>= 0.0.0)
+    git (>= 0.0.0)
     helios (>= 0.0.0)
     keepass2 (>= 0.0.0)
     minicom (>= 0.0.0)

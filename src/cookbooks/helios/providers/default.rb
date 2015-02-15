@@ -19,19 +19,19 @@ action :add do
     group group
     mode 0755
   end
-  bash_config_alias 'h-mount' do
+  bash_alias 'h-mount' do
     user new_resource.user
     command 'sudo mount -t nfs -o proto=tcp,port=2049 192.168.50.3:/helios ~/development/helios/vm'
   end
-  bash_config_alias 'h-umount' do
+  bash_alias 'h-umount' do
     user new_resource.user
     command 'sudo umount ~/development/helios/vm'
   end
-  bash_config_alias 'h-ssh' do
+  bash_alias 'h-ssh' do
     user new_resource.user
     command 'ssh heliosdev@192.168.50.3'
   end
-  bash_config_alias 'h-cd' do
+  bash_alias 'h-cd' do
     user new_resource.user
     command 'cd ~/development/helios/vm'
   end
@@ -45,15 +45,18 @@ action :add do
     cookbook 'helios'
     tmuxomatic 'tmuxomatic/helios-development-infrastructure'
     repository 'git@gitlab.upc.biz:helios/development-infrastructure'
+    email 'phalliday@libertyglobal.com'
   end
   project 'development/helios/helios-jira-project-analysis' do
     user new_resource.user
     cookbook 'helios'
     tmuxomatic 'tmuxomatic/helios-jira-project-analysis'
     repository 'git@gitlab.upc.biz:phalliday/helios-jira-project-analysis.git'
+    email 'phalliday@libertyglobal.com'
   end
   project 'development/helios/local-dev-vm-setup' do
     user new_resource.user
     repository 'git@gitlab.upc.biz:helios/local-dev-vm-setup.git'
+    email 'phalliday@libertyglobal.com'
   end
 end

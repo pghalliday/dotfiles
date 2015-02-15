@@ -1,5 +1,5 @@
 name 'helios'
 version '0.1.0'
 depends 'project'
-depends 'bash-config'
+depends 'bash'
 depends 'tmuxomatic'

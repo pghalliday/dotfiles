@@ -7,7 +7,7 @@ use_inline_resources
 action :add do
   home = ::Dir.home(new_resource.user)
   group = ::Etc.getpwnam(new_resource.user).gid
-  bash_config_alias 'tmux' do
+  bash_alias 'tmux' do
     command 'tmux -2'
     user new_resource.user
   end

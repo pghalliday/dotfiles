@@ -22,7 +22,7 @@ action :add do
     group group
     mode 0644
   end
-  bash_config_alias "snx.#{new_resource.name}" do
+  bash_alias "snx.#{new_resource.name}" do
     command "snx -f #{snx_config}"
     user new_resource.user
   end
