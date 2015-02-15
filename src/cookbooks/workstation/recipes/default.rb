@@ -128,7 +128,6 @@ include_recipe 'vagrant::default'
 }.each do |vagrant_plugin_name|
   vagrant_plugin vagrant_plugin_name do
     user workstation_user
-    group workstation_group
   end
 end
 
