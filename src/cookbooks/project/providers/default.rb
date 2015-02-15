@@ -25,7 +25,6 @@ action :add do
       "su -l #{new_resource.user} -c 'cd #{dir} && git status'"
     )
     git_status.run_command
-    log git_status.error?
     if git_status.error?
       git_clone = Mixlib::ShellOut.new(
         "su -l #{new_resource.user} -c 'git clone #{new_resource.repository} #{dir}'"
