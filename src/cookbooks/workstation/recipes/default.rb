@@ -20,6 +20,9 @@ end
 include_recipe 'chefdk::default'
 chefdk workstation_user
 
+# install nodejs
+include_recipe 'nodejs::default'
+
 # install dropbox
 include_recipe 'dropbox::default'
 

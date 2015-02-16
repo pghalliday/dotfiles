@@ -27,6 +27,8 @@ DEPENDENCIES
     path: src/cookbooks/keepass2
   minicom
     path: src/cookbooks/minicom
+  nodejs
+    path: src/cookbooks/nodejs
   project
     path: src/cookbooks/project
   skype
@@ -73,6 +75,8 @@ GRAPH
   keepass2 (0.1.0)
   minicom (0.1.0)
     bash (>= 0.0.0)
+  nodejs (0.1.0)
+    apt (>= 0.0.0)
   project (0.1.0)
     bash (>= 0.0.0)
     git (>= 0.0.0)
@@ -105,6 +109,7 @@ GRAPH
     helios (>= 0.0.0)
     keepass2 (>= 0.0.0)
     minicom (>= 0.0.0)
+    nodejs (>= 0.0.0)
     skype (>= 0.0.0)
     snx (>= 0.0.0)
     syntastic (>= 0.0.0)
