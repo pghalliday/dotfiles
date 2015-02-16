@@ -13,14 +13,14 @@ bash 'install n' do
   only_if {n_installed.error?}
 end
 
-stable_installed = Mixlib::ShellOut.new('n bin stable')
+stable_installed = Mixlib::ShellOut.new('n bin $(n --stable)')
 stable_installed.run_command
 bash 'install stable' do
   code 'n stable'
   only_if {stable_installed.error?}
 end
 
-latest_installed = Mixlib::ShellOut.new('n bin latest')
+latest_installed = Mixlib::ShellOut.new('n bin $(n --latest)')
 latest_installed.run_command
 bash 'install latest' do
   code 'n latest'
