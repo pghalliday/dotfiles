@@ -23,6 +23,9 @@ chefdk workstation_user
 # install nodejs
 include_recipe 'nodejs::default'
 
+# install R
+include_recipe 'r::default'
+
 # install dropbox
 include_recipe 'dropbox::default'
 

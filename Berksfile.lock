@@ -31,6 +31,8 @@ DEPENDENCIES
     path: src/cookbooks/nodejs
   project
     path: src/cookbooks/project
+  r
+    path: src/cookbooks/r
   skype
     path: src/cookbooks/skype
   snx
@@ -81,6 +83,8 @@ GRAPH
     bash (>= 0.0.0)
     git (>= 0.0.0)
     tmuxomatic (>= 0.0.0)
+  r (0.1.0)
+    apt (>= 0.0.0)
   skype (0.1.0)
   snx (0.1.0)
     bash (>= 0.0.0)
@@ -110,6 +114,7 @@ GRAPH
     keepass2 (>= 0.0.0)
     minicom (>= 0.0.0)
     nodejs (>= 0.0.0)
+    r (>= 0.0.0)
     skype (>= 0.0.0)
     snx (>= 0.0.0)
     syntastic (>= 0.0.0)
