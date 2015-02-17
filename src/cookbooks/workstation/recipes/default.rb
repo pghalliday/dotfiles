@@ -22,6 +22,9 @@ git_init workstation_user do
   user_name 'Peter Halliday'
 end
 
+# install ruby
+include_recipe 'ruby::default'
+
 # install chefdk
 include_recipe 'chefdk::default'
 chefdk workstation_user
