@@ -9,6 +9,6 @@ BBD
   dir ~/development/shiny-jira-project-analysis/
 A run vim README.md
 B run git status
-C run fig up
-D run R
+C run R
+D run bundle exec guard
 A foc
