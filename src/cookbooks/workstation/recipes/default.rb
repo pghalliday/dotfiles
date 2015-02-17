@@ -6,6 +6,12 @@ workstation_cookbook_files = workstation_cookbook.manifest['files']
 # make sure apt repository  is up to date
 include_recipe 'apt::default'
 
+# install nfs client stuff
+package 'nfs-common'
+
+# install inotify-tools
+package 'inotify-tools'
+
 # install bash
 include_recipe 'bash'
 bash_init workstation_user
@@ -28,9 +34,6 @@ include_recipe 'r::default'
 
 # install dropbox
 include_recipe 'dropbox::default'
-
-# install nfs client stuff
-package 'nfs-common'
 
 # install Filezilla
 include_recipe 'filezilla::default'
