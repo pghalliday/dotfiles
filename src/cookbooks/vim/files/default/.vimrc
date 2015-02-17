@@ -91,6 +91,7 @@ if has("autocmd")
   autocmd BufNewFile,BufRead Gemfile set filetype=ruby
   autocmd BufNewFile,BufRead Vagrantfile set filetype=ruby
   autocmd BufNewFile,BufRead Berksfile set filetype=ruby
+  autocmd BufNewFile,BufRead Guardfile set filetype=ruby
 else
 
   set autoindent		" always set autoindenting on

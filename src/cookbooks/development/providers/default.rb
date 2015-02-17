@@ -24,6 +24,7 @@ action :add do
     jira-project-analysis
     shiny-jira-project-analysis
     tasks
+    pghalliday.github.io
   }.each do |name|
     project "development/#{name}" do
       user new_resource.user
