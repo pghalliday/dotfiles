@@ -12,6 +12,9 @@ package 'nfs-common'
 # install inotify-tools
 package 'inotify-tools'
 
+# install xclip
+package 'xclip'
+
 # install bash
 include_recipe 'bash'
 bash_init workstation_user
