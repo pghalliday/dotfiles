@@ -28,7 +28,7 @@ action :add do
   file bash_aliasesdsh do
     content <<-EOH
 function #{new_resource.name} {
-  #{new_resource.command}
+  #{new_resource.command} $@
 }
 EOH
     owner new_resource.user

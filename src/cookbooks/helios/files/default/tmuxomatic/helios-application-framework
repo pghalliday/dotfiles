@@ -1,13 +1,12 @@
 window helios-application-framework
 
 AAB
+AAB
 AAC
-AAD
 
   foc
   dir ~/development/helios/vm/development/helios/helios-application-framework/
 A run vim README.md
 B run h-ssh -t "cd ~/development/helios/helios-application-framework/; source ./sourceme; bash --login"
-C run git status
-D run minicom.USB0
+C run minicom.USB0
 A foc
