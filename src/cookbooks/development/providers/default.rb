@@ -20,6 +20,7 @@ action :add do
   end
   %w{
     dotfiles
+    git-jira-utils
     grunt-mocha-test
     jira-project-analysis
     shiny-jira-project-analysis

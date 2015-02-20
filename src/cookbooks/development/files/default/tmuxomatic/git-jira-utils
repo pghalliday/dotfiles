@@ -1,0 +1,9 @@
+window git-jira-utils
+
+AAB
+
+  foc
+  dir ~/development/git-jira-utils/
+A run vim README.md
+B run git status
+A foc
