@@ -21,6 +21,7 @@ action :add do
   %w{
     dotfiles
     git-jira-utils
+    tee-with-timestamp
     grunt-mocha-test
     jira-project-analysis
     shiny-jira-project-analysis
@@ -34,5 +35,17 @@ action :add do
       repository "git@github.com:pghalliday/#{name}.git"
       email 'pghalliday@gmail.com'
     end
+  end
+  bash_alias 'tee-with-timestamp' do
+    user new_resource.user
+    command '~/development/tee-with-timestamp/tee-with-timestamp.sh'
+  end
+  bash_alias 'git-jira-utils-branch-commits' do
+    user new_resource.user
+    command '~/development/git-jira-utils/branch-commits.sh'
+  end
+  bash_alias 'git-jira-utils-diff-commits' do
+    user new_resource.user
+    command '~/development/git-jira-utils/diff-commits.sh'
   end
 end

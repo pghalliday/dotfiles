@@ -1,0 +1,9 @@
+window tee-with-timestamp
+
+AAB
+
+  foc
+  dir ~/development/tee-with-timestamp/
+A run vim README.md
+B run git status
+A foc
