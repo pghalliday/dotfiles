@@ -25,14 +25,27 @@ action :add do
     group group
     mode 0755
   end
-  file bash_aliasesdsh do
-    content <<-EOH
-function #{new_resource.name} {
-  #{new_resource.command} $@
-}
-EOH
-    owner new_resource.user
-    group group
-    mode 0644
+  if new_resource.subshell
+    file bash_aliasesdsh do
+      content <<-EOH
+  function #{new_resource.name} {
+    (#{new_resource.command} $@)
+  }
+  EOH
+      owner new_resource.user
+      group group
+      mode 0644
+    end
+  else
+    file bash_aliasesdsh do
+      content <<-EOH
+  function #{new_resource.name} {
+    #{new_resource.command} $@
+  }
+  EOH
+      owner new_resource.user
+      group group
+      mode 0644
+    end
   end
 end

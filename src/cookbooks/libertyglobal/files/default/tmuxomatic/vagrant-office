@@ -1,0 +1,9 @@
+window vagrant-office
+
+AAB
+
+  foc
+  dir ~/development/vagrant-office/
+A run vim README.md
+B run git status
+A foc

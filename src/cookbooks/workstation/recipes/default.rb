@@ -136,5 +136,8 @@ include_recipe 'chrome::default'
 # set up development projects
 development workstation_user
 
+# set up libertyglobal projects
+libertyglobal workstation_user
+
 # set up Helios projects
 helios workstation_user

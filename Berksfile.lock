@@ -25,6 +25,8 @@ DEPENDENCIES
     path: src/cookbooks/helios
   keepass2
     path: src/cookbooks/keepass2
+  libertyglobal
+    path: src/cookbooks/libertyglobal
   minicom
     path: src/cookbooks/minicom
   nodejs
@@ -80,6 +82,9 @@ GRAPH
     project (>= 0.0.0)
     tmuxomatic (>= 0.0.0)
   keepass2 (0.1.0)
+  libertyglobal (0.1.0)
+    bash (>= 0.0.0)
+    project (>= 0.0.0)
   minicom (0.1.0)
     bash (>= 0.0.0)
   nodejs (0.1.0)
@@ -118,6 +123,7 @@ GRAPH
     git (>= 0.0.0)
     helios (>= 0.0.0)
     keepass2 (>= 0.0.0)
+    libertyglobal (>= 0.0.0)
     minicom (>= 0.0.0)
     nodejs (>= 0.0.0)
     r (>= 0.0.0)
