@@ -48,4 +48,8 @@ action :add do
     user new_resource.user
     command '~/development/git-jira-utils/diff-commits.sh'
   end
+  bash_alias 'git-jira-utils-release-analysis' do
+    user new_resource.user
+    command '~/development/git-jira-utils/release-analysis.sh'
+  end
 end
