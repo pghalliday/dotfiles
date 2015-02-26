@@ -30,11 +30,6 @@ include_recipe 'meld::default'
 # use meld as default git diff tool
 meld_init workstation_user
 
-# install p4v
-include_recipe 'p4v::default'
-# don't add p4merge as git diff tool as we will use meld
-# p4v_init workstation_user
-
 # install ruby
 include_recipe 'ruby::default'
 
