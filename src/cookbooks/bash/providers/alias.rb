@@ -29,7 +29,7 @@ action :add do
     file bash_aliasesdsh do
       content <<-EOH
   function #{new_resource.name} {
-    (#{new_resource.command} $@)
+    (#{new_resource.command} ${@:#{new_resource.arg_offset + 1}})
   }
   EOH
       owner new_resource.user
@@ -40,7 +40,7 @@ action :add do
     file bash_aliasesdsh do
       content <<-EOH
   function #{new_resource.name} {
-    #{new_resource.command} $@
+    #{new_resource.command} ${@:#{new_resource.arg_offset + 1}}
   }
   EOH
       owner new_resource.user

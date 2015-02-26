@@ -35,6 +35,20 @@ action :add do
     user new_resource.user
     command 'cd ~/development/helios/vm'
   end
+  bash_alias 'helios-release-analysis' do
+    user new_resource.user
+    command 'git-jira-utils-release-analysis "development" "origin/release/" "HS_[0-9]+\\.[0-9]+\\.[0-9]+" "\\.[a-z]"'
+  end
+  bash_alias 'helios-release-branch-commits' do
+    user new_resource.user
+    command 'echo JIRA Password for phalliday:; read -s password; git-jira-utils-branch-commits origin/release/$1 development phalliday "$password" jira.upc.biz https HEL-[0-9]*'
+    arg_offset 1
+  end
+  bash_alias 'helios-release-diff-commits' do
+    user new_resource.user
+    command 'echo JIRA Password for phalliday:; read -s password; git-jira-utils-diff-commits origin/release/$1 development phalliday "$password" jira.upc.biz https HEL-[0-9]*'
+    arg_offset 1
+  end
   tmuxomatic 'helios-application-framework' do
     user new_resource.user
     cookbook 'helios'
