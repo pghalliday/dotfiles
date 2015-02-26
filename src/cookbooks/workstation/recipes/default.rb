@@ -9,6 +9,9 @@ include_recipe 'apt::default'
 # install curl
 package 'curl'
 
+# install bmon
+package 'bmon'
+
 # install nfs client stuff
 package 'nfs-common'
 
