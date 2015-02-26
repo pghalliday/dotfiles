@@ -120,6 +120,7 @@ docker workstation_user
 
 # install virtualbox
 include_recipe 'virtualbox::default'
+virtualbox workstation_user
 
 # install vagrant and plugins
 include_recipe 'vagrant::default'
