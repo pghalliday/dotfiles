@@ -6,6 +6,9 @@ workstation_cookbook_files = workstation_cookbook.manifest['files']
 # make sure apt repository  is up to date
 include_recipe 'apt::default'
 
+# install curl
+package 'curl'
+
 # install nfs client stuff
 package 'nfs-common'
 
@@ -33,8 +36,8 @@ meld_init workstation_user
 # install ruby
 include_recipe 'ruby::default'
 
-# install chefdk
-include_recipe 'chefdk::default'
+# install chefdk (not till we can run this recipe without having chefdk already installed)
+# include_recipe 'chefdk::default'
 chefdk workstation_user
 
 # install nodejs
