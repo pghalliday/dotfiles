@@ -70,6 +70,8 @@ action :add do
   end
   project 'development/helios/local-dev-vm-setup' do
     user new_resource.user
+    cookbook 'helios'
+    tmuxomatic 'tmuxomatic/helios-local-dev-vm-setup'
     repository 'git@gitlab.upc.biz:helios/local-dev-vm-setup.git'
     email 'phalliday@libertyglobal.com'
   end
