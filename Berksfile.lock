@@ -27,10 +27,14 @@ DEPENDENCIES
     path: src/cookbooks/keepass2
   libertyglobal
     path: src/cookbooks/libertyglobal
+  meld
+    path: src/cookbooks/meld
   minicom
     path: src/cookbooks/minicom
   nodejs
     path: src/cookbooks/nodejs
+  p4v
+    path: src/cookbooks/p4v
   project
     path: src/cookbooks/project
   r
@@ -85,10 +89,14 @@ GRAPH
   libertyglobal (0.1.0)
     bash (>= 0.0.0)
     project (>= 0.0.0)
+  meld (0.1.0)
+    git (>= 0.0.0)
   minicom (0.1.0)
     bash (>= 0.0.0)
   nodejs (0.1.0)
     apt (>= 0.0.0)
+  p4v (0.1.0)
+    git (>= 0.0.0)
   project (0.1.0)
     bash (>= 0.0.0)
     git (>= 0.0.0)
@@ -124,8 +132,10 @@ GRAPH
     helios (>= 0.0.0)
     keepass2 (>= 0.0.0)
     libertyglobal (>= 0.0.0)
+    meld (>= 0.0.0)
     minicom (>= 0.0.0)
     nodejs (>= 0.0.0)
+    p4v (>= 0.0.0)
     r (>= 0.0.0)
     ruby (>= 0.0.0)
     skype (>= 0.0.0)
