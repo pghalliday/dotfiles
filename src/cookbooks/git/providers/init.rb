@@ -13,4 +13,8 @@ action :add do
     user new_resource.user
     value 'simple'
   end
+  git_config 'merge.ff' do
+    user new_resource.user
+    value 'only'
+  end
 end
