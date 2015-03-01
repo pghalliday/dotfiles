@@ -1,4 +1,6 @@
 workstation_user = node['workstation']['user']
+workstation_aws_access_key_id = node['workstation']['aws_access_key_id']
+workstation_aws_secret_access_key = node['workstation']['aws_secret_access_key']
 
 workstation_cookbook = run_context.cookbook_collection[cookbook_name]
 workstation_cookbook_files = workstation_cookbook.manifest['files']
@@ -127,6 +129,11 @@ docker workstation_user
 # install virtualbox
 include_recipe 'virtualbox::default'
 virtualbox workstation_user
+
+# install  vmware workstation
+node.override['vmware-workstation']['aws_access_key_id'] = workstation_aws_access_key_id
+node.override['vmware-workstation']['aws_secret_access_key'] = workstation_aws_secret_access_key
+include_recipe 'vmware-workstation::default'
 
 # install vagrant and plugins
 include_recipe 'vagrant::default'
