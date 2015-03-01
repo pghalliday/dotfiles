@@ -126,15 +126,6 @@ minicom workstation_user
 include_recipe 'docker::default'
 docker workstation_user
 
-# install virtualbox
-include_recipe 'virtualbox::default'
-virtualbox workstation_user
-
-# install  vmware workstation
-node.override['vmware-workstation']['aws_access_key_id'] = workstation_aws_access_key_id
-node.override['vmware-workstation']['aws_secret_access_key'] = workstation_aws_secret_access_key
-include_recipe 'vmware-workstation::default'
-
 # install vagrant and plugins
 include_recipe 'vagrant::default'
 %w{
@@ -144,6 +135,20 @@ include_recipe 'vagrant::default'
   vagrant_plugin vagrant_plugin_name do
     user workstation_user
   end
+end
+
+# install virtualbox
+include_recipe 'virtualbox::default'
+virtualbox workstation_user
+
+# install  vmware workstation
+node.override['vmware-workstation']['aws_access_key_id'] = workstation_aws_access_key_id
+node.override['vmware-workstation']['aws_secret_access_key'] = workstation_aws_secret_access_key
+include_recipe 'vmware-workstation::default'
+# add the vmware workstation vagrant plugin
+vmware_workstation workstation_user do
+  aws_access_key_id workstation_aws_access_key_id
+  aws_secret_access_key workstation_aws_secret_access_key
 end
 
 # install skype
