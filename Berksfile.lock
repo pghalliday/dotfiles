@@ -21,6 +21,8 @@ DEPENDENCIES
     path: src/cookbooks/filezilla
   git
     path: src/cookbooks/git
+  gsettings
+    path: src/cookbooks/gsettings
   helios
     path: src/cookbooks/helios
   keepass2
@@ -47,6 +49,8 @@ DEPENDENCIES
     path: src/cookbooks/snx
   syntastic
     path: src/cookbooks/syntastic
+  theme
+    path: src/cookbooks/theme
   tmux
     path: src/cookbooks/tmux
   tmuxomatic
@@ -83,6 +87,7 @@ GRAPH
     apt (>= 0.0.0)
   filezilla (0.1.0)
   git (0.1.0)
+  gsettings (0.1.0)
   helios (0.1.0)
     bash (>= 0.0.0)
     project (>= 0.0.0)
@@ -110,6 +115,9 @@ GRAPH
     bash (>= 0.0.0)
   syntastic (0.1.0)
     vim (>= 0.0.0)
+  theme (0.1.0)
+    apt (>= 0.0.0)
+    gsettings (>= 0.0.0)
   tmux (0.1.0)
     bash (>= 0.0.0)
   tmuxomatic (0.1.0)
@@ -143,6 +151,7 @@ GRAPH
     skype (>= 0.0.0)
     snx (>= 0.0.0)
     syntastic (>= 0.0.0)
+    theme (>= 0.0.0)
     tmux (>= 0.0.0)
     tmuxomatic (>= 0.0.0)
     vagrant (>= 0.0.0)

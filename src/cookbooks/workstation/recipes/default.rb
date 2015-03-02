@@ -8,6 +8,10 @@ workstation_cookbook_files = workstation_cookbook.manifest['files']
 # make sure apt repository  is up to date
 include_recipe 'apt::default'
 
+# setup desktop theme and icons
+include_recipe 'theme::default'
+theme workstation_user
+
 # install curl
 package 'curl'
 

@@ -6,7 +6,7 @@ use_inline_resources
 
 action :install do
   vagrant_plugin_list_command = Mixlib::ShellOut.new(
-    "su -l #{new_resource.user} vagrant plugin list",
+    "su -l #{new_resource.user} vagrant plugin list"
   )
   vagrant_plugin_list_command.run_command()
   vagrant_plugin_list_command.error!
