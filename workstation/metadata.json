@@ -1,0 +1,64 @@
+{
+  "name": "workstation",
+  "description": "A fabulous new cookbook",
+  "long_description": "",
+  "maintainer": "YOUR_COMPANY_NAME",
+  "maintainer_email": "YOUR_EMAIL",
+  "license": "none",
+  "platforms": {
+  },
+  "dependencies": {
+    "apt": ">= 0.0.0",
+    "tmuxomatic": ">= 0.0.0",
+    "base16-shell": ">= 0.0.0",
+    "bash-git-prompt": ">= 0.0.0",
+    "snx": ">= 0.0.0",
+    "chrome": ">= 0.0.0",
+    "skype": ">= 0.0.0",
+    "virtualbox": ">= 0.0.0",
+    "tmux": ">= 0.0.0",
+    "docker": ">= 0.0.0",
+    "vagrant": ">= 0.0.0",
+    "minicom": ">= 0.0.0",
+    "bash": ">= 0.0.0",
+    "vim": ">= 0.0.0",
+    "syntastic": ">= 0.0.0",
+    "base16-vim": ">= 0.0.0",
+    "dropbox": ">= 0.0.0",
+    "filezilla": ">= 0.0.0",
+    "keepass2": ">= 0.0.0",
+    "chefdk": ">= 0.0.0",
+    "helios": ">= 0.0.0",
+    "development": ">= 0.0.0",
+    "git": ">= 0.0.0",
+    "nodejs": ">= 0.0.0",
+    "r": ">= 0.0.0",
+    "ruby": ">= 0.0.0",
+    "libertyglobal": ">= 0.0.0",
+    "meld": ">= 0.0.0",
+    "vmware-workstation": ">= 0.0.0",
+    "theme": ">= 0.0.0",
+    "gimp": ">= 0.0.0",
+    "blender": ">= 0.0.0",
+    "remmina": ">= 0.0.0"
+  },
+  "recommendations": {
+  },
+  "suggestions": {
+  },
+  "conflicting": {
+  },
+  "providing": {
+  },
+  "replacing": {
+  },
+  "attributes": {
+  },
+  "groupings": {
+  },
+  "recipes": {
+  },
+  "version": "0.1.0",
+  "source_url": "",
+  "issues_url": ""
+}
