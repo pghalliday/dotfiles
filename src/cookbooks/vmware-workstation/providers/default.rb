@@ -8,7 +8,7 @@ action :add do
   license = "#{Chef::Config[:file_cache_path]}/vagrant-vmware-workstation-license.lic"
   s3_file license do
     remote_path '/vagrant-vmware-workstation-license.lic'
-    bucket 'dotfiles.pghalliday.com'
+    bucket new_resource.aws_s3_bucket
     aws_access_key_id new_resource.aws_access_key_id
     aws_secret_access_key new_resource.aws_secret_access_key
     mode 0644

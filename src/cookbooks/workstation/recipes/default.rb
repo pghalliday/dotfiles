@@ -1,4 +1,5 @@
 workstation_user = node['workstation']['user']
+workstation_aws_s3_bucket = node['workstation']['aws_s3_bucket']
 workstation_aws_access_key_id = node['workstation']['aws_access_key_id']
 workstation_aws_secret_access_key = node['workstation']['aws_secret_access_key']
 
@@ -146,11 +147,13 @@ include_recipe 'virtualbox::default'
 virtualbox workstation_user
 
 # install  vmware workstation
+node.override['vmware-workstation']['aws_s3_bucket'] = workstation_aws_s3_bucket
 node.override['vmware-workstation']['aws_access_key_id'] = workstation_aws_access_key_id
 node.override['vmware-workstation']['aws_secret_access_key'] = workstation_aws_secret_access_key
 include_recipe 'vmware-workstation::default'
 # add the vmware workstation vagrant plugin
 vmware_workstation workstation_user do
+  aws_s3_bucket workstation_aws_s3_bucket
   aws_access_key_id workstation_aws_access_key_id
   aws_secret_access_key workstation_aws_secret_access_key
 end
