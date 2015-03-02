@@ -55,6 +55,8 @@ DEPENDENCIES
     path: src/cookbooks/tmux
   tmuxomatic
     path: src/cookbooks/tmuxomatic
+  travis
+    path: src/cookbooks/travis
   vagrant
     path: src/cookbooks/vagrant
   vim
@@ -122,6 +124,7 @@ GRAPH
     bash (>= 0.0.0)
   tmuxomatic (0.1.0)
     bash (>= 0.0.0)
+  travis (0.1.0)
   vagrant (0.1.0)
   vim (0.1.0)
   virtualbox (0.1.0)
@@ -154,6 +157,7 @@ GRAPH
     theme (>= 0.0.0)
     tmux (>= 0.0.0)
     tmuxomatic (>= 0.0.0)
+    travis (>= 0.0.0)
     vagrant (>= 0.0.0)
     vim (>= 0.0.0)
     virtualbox (>= 0.0.0)

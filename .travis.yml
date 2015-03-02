@@ -1,0 +1,12 @@
+language: ruby
+install:
+  - curl -L https://www.opscode.com/chef/install.sh | sudo bash -s -- -P chefdk
+script:
+  - chef exec berks vendor ./cookbooks/
+  - ./deploy.sh
+env:
+  global:
+    - ENCRYPTION_LABEL="b3ae55940f91"
+    - GIT_NAME="Peter Halliday"
+    - GIT_EMAIL="pghalliday@gmail.com"
+    - DEPLOY_BRANCH="master"
