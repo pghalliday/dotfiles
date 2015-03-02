@@ -9,6 +9,14 @@ workstation_cookbook_files = workstation_cookbook.manifest['files']
 # make sure apt repository  is up to date
 include_recipe 'apt::default'
 
+# setup ssh and keys
+include_recipe 'ssh::default'
+ssh workstation_user do
+  aws_s3_bucket workstation_aws_s3_bucket
+  aws_access_key_id workstation_aws_access_key_id
+  aws_secret_access_key workstation_aws_secret_access_key
+end
+
 # setup desktop theme and icons
 include_recipe 'theme::default'
 theme workstation_user
@@ -47,7 +55,7 @@ meld_init workstation_user
 include_recipe 'ruby::default'
 
 # install chefdk (not till we can run this recipe without having chefdk already installed)
-# include_recipe 'chefdk::default'
+include_recipe 'chefdk::default'
 chefdk workstation_user
 
 # install nodejs

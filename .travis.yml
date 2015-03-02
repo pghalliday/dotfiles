@@ -2,7 +2,7 @@ language: ruby
 install:
   - curl -L https://www.opscode.com/chef/install.sh | sudo bash -s -- -P chefdk
 before_script:
-  - chef exec berks vendor ./cookbooks/
+  - ./build.sh
 script:
   - echo "No tests implemented (yet...)"
 after_script:

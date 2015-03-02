@@ -4,7 +4,7 @@ set -e
 # Deploy built site to this branch
 TARGET_BRANCH=vendor
 # Sync the contents of this directory where the cookbooks should have been vendored
-SOURCE_DIR=cookbooks
+SOURCE_DIR=vendor
  
 if [ ! -d "$SOURCE_DIR" ]; then
   echo "SOURCE_DIR ($SOURCE_DIR) does not exist, build the source directory before deploying"
