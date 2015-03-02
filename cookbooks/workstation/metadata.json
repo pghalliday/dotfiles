@@ -40,7 +40,8 @@
     "theme": ">= 0.0.0",
     "gimp": ">= 0.0.0",
     "blender": ">= 0.0.0",
-    "remmina": ">= 0.0.0"
+    "remmina": ">= 0.0.0",
+    "ssh": ">= 0.0.0"
   },
   "recommendations": {
   },
