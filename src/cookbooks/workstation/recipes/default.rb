@@ -164,6 +164,15 @@ include_recipe 'skype::default'
 # install chrome
 include_recipe 'chrome::default'
 
+# install gimp
+include_recipe 'gimp::default'
+
+# install blender
+include_recipe 'blender::default'
+
+# install remmina
+include_recipe 'remmina::default'
+
 # set up development projects
 development workstation_user
 
