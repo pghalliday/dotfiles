@@ -1,78 +1,78 @@
 DEPENDENCIES
   base16-shell
-    path: src/cookbooks/base16-shell
+    path: cookbooks/base16-shell
   base16-vim
-    path: src/cookbooks/base16-vim
+    path: cookbooks/base16-vim
   bash
-    path: src/cookbooks/bash
+    path: cookbooks/bash
   bash-git-prompt
-    path: src/cookbooks/bash-git-prompt
+    path: cookbooks/bash-git-prompt
   blender
-    path: src/cookbooks/blender
+    path: cookbooks/blender
   chefdk
-    path: src/cookbooks/chefdk
+    path: cookbooks/chefdk
   chrome
-    path: src/cookbooks/chrome
+    path: cookbooks/chrome
   development
-    path: src/cookbooks/development
+    path: cookbooks/development
   docker
-    path: src/cookbooks/docker
+    path: cookbooks/docker
   dropbox
-    path: src/cookbooks/dropbox
+    path: cookbooks/dropbox
   filezilla
-    path: src/cookbooks/filezilla
+    path: cookbooks/filezilla
   gimp
-    path: src/cookbooks/gimp
+    path: cookbooks/gimp
   git
-    path: src/cookbooks/git
+    path: cookbooks/git
   gsettings
-    path: src/cookbooks/gsettings
+    path: cookbooks/gsettings
   helios
-    path: src/cookbooks/helios
+    path: cookbooks/helios
   keepass2
-    path: src/cookbooks/keepass2
+    path: cookbooks/keepass2
   libertyglobal
-    path: src/cookbooks/libertyglobal
+    path: cookbooks/libertyglobal
   meld
-    path: src/cookbooks/meld
+    path: cookbooks/meld
   minicom
-    path: src/cookbooks/minicom
+    path: cookbooks/minicom
   nodejs
-    path: src/cookbooks/nodejs
+    path: cookbooks/nodejs
   project
-    path: src/cookbooks/project
+    path: cookbooks/project
   r
-    path: src/cookbooks/r
+    path: cookbooks/r
   remmina
-    path: src/cookbooks/remmina
+    path: cookbooks/remmina
   ruby
-    path: src/cookbooks/ruby
+    path: cookbooks/ruby
   s3_file
-    path: src/cookbooks/s3_file
+    path: cookbooks/s3_file
   skype
-    path: src/cookbooks/skype
+    path: cookbooks/skype
   snx
-    path: src/cookbooks/snx
+    path: cookbooks/snx
   ssh
-    path: src/cookbooks/ssh
+    path: cookbooks/ssh
   syntastic
-    path: src/cookbooks/syntastic
+    path: cookbooks/syntastic
   theme
-    path: src/cookbooks/theme
+    path: cookbooks/theme
   tmux
-    path: src/cookbooks/tmux
+    path: cookbooks/tmux
   tmuxomatic
-    path: src/cookbooks/tmuxomatic
+    path: cookbooks/tmuxomatic
   vagrant
-    path: src/cookbooks/vagrant
+    path: cookbooks/vagrant
   vim
-    path: src/cookbooks/vim
+    path: cookbooks/vim
   virtualbox
-    path: src/cookbooks/virtualbox
+    path: cookbooks/virtualbox
   vmware-workstation
-    path: src/cookbooks/vmware-workstation
+    path: cookbooks/vmware-workstation
   workstation
-    path: src/cookbooks/workstation
+    path: cookbooks/workstation
 
 GRAPH
   apt (2.6.1)
