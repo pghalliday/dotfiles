@@ -1,15 +1,6 @@
 dotfiles
 ========
 
-Prerequisites
--------------
-
-Install Chef client
-
-```sh
-wget -O- https://www.opscode.com/chef/install.sh | sudo bash
-```
-
 Usage
 -----
 
@@ -29,6 +20,12 @@ cat > ~/.dotfiles//attributes.json << EOH
 EOH
 ```
 
+Install the Chef client
+
+```sh
+wget -O- https://www.opscode.com/chef/install.sh | sudo bash
+```
+
 Download and unpack the cookbook tarball
 
 ```sh
@@ -46,7 +43,7 @@ Then run
 Development
 -----------
 
-Once converged (as above), change to the repository working directory, make changes to cookbooks then run
+Once converged (see above), change to the repository working directory, make changes to cookbooks then run
 
 ```sh
 ./all.sh
