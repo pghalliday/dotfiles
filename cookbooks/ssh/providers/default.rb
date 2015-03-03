@@ -35,4 +35,12 @@ action :add do
     group group
     mode 0644
   end
+  ssh_known_host 'github.com' do
+    user new_resource.user
+    fingerprint '16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48'
+  end
+  ssh_known_host 'gitlab.upc.biz' do
+    user new_resource.user
+    fingerprint 'b9:34:b6:51:bb:bd:9a:b9:21:b5:70:d6:8b:78:7b:2e'
+  end
 end
