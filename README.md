@@ -1,6 +1,8 @@
 dotfiles
 ========
 
+[![Build Status](https://travis-ci.org/pghalliday/dotfiles.svg?branch=master)](https://travis-ci.org/pghalliday/dotfiles)
+
 Usage
 -----
 
