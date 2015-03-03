@@ -10,7 +10,7 @@ Create the file `~/.dotfiles/attributes.json` with the correct settings
 
 ```sh
 mkdir ~/.dotfiles/
-cat > ~/.dotfiles//attributes.json << EOH
+cat > ~/.dotfiles/attributes.json << EOH
 {
   "workstation": {
     "user": "user",
