@@ -26,7 +26,7 @@ action :add do
   s3_file id_rsa do
     bucket new_resource.aws_s3_bucket
     remote_path '/id_rsa'
-    checksum 'afdd48efbbeec3835562298d6ff0965ffb22fad7a352f01d3848764c279934f9'
+    checksum '82bd6a8823c59102972ffedfb773fe1c60323912f7d23afab4ebfdf972d673ac'
     aws_access_key_id new_resource.aws_access_key_id
     aws_secret_access_key new_resource.aws_secret_access_key
     owner new_resource.user
@@ -36,7 +36,7 @@ action :add do
   s3_file id_rsa_pub do
     bucket new_resource.aws_s3_bucket
     remote_path '/id_rsa.pub'
-    checksum '527d95cde70d905005754259e7596ecab8751c340bc877290f6a548b5868f805'
+    checksum '8787b0eb65fea99ae22ad0fc6562ef796c7526fdfdad01fa37e111e1903f4c1e'
     aws_access_key_id new_resource.aws_access_key_id
     aws_secret_access_key new_resource.aws_secret_access_key
     owner new_resource.user
