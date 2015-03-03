@@ -43,7 +43,8 @@ action :add do
   end
   host_known_command = Mixlib::ShellOut.new(
     "ssh-keygen -F #{host} -f #{known_hosts} -l",
-    user: user
+    user: user,
+    group: group
   )
   host_known_command.run_command
   add_host = true
@@ -56,6 +57,7 @@ action :add do
         bash "delete known host #{host} with incorrect fingerprint" do
           code "ssh-keygen -R #{host}"
           user user
+          group group
         end
         add_host = true
       end
@@ -63,8 +65,7 @@ action :add do
   end
   if add_host
     get_known_hosts_entry = Mixlib::ShellOut.new(
-      "ssh-keyscan -H #{host}",
-      user: user
+      "ssh-keyscan -H #{host}"
     )
     get_known_hosts_entry.run_command
     get_known_hosts_entry.error!
@@ -76,6 +77,7 @@ action :add do
     bash "add known host #{host}" do
       code "echo '#{get_known_hosts_entry.stdout}' >> #{known_hosts}"
       user user
+      group group
     end
   end
 end
