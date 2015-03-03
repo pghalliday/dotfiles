@@ -24,4 +24,10 @@ action :add do
     value 'Ambiance-Blackout-Flat-Blue'
     user user
   end
+  gsettings 'set desktop background' do
+    schema 'org.gnome.desktop.background'
+    key 'picture-uri'
+    value 'file:///usr/share/backgrounds/xgu472hf2_by_lariliikala.jpg'
+    user user
+  end
 end
