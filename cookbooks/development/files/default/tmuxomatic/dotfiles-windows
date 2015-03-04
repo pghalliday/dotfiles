@@ -1,0 +1,9 @@
+window dotfiles-windows
+
+AAB
+
+  foc
+  dir ~/development/dotfiles-windows/
+A run vim README.md
+B run git status
+A foc
