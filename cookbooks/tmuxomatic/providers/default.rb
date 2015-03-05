@@ -14,12 +14,28 @@ action :add do
     group group
     mode 0755
   end
-  cookbook_file tmuxomatic_config do
-    cookbook new_resource.cookbook
-    source new_resource.source
-    owner new_resource.user
-    group group
-    mode 0644
+  if !new_resource.source.nil?
+    cookbook_file tmuxomatic_config do
+      cookbook new_resource.cookbook
+      source new_resource.source
+      owner new_resource.user
+      group group
+      mode 0644
+    end
+  elsif !new_resource.directory.nil?
+    template tmuxomatic_config do
+      cookbook 'tmuxomatic'
+      source 'basic-config.erb'
+      owner new_resource.user
+      group group
+      mode 0644
+      variables({
+        name: new_resource.name,
+        directory: new_resource.directory
+      })
+    end
+  else
+    Chef::Application.fatal!('tmuxomatic resource requires one of source or directory')
   end
   bash_alias "tmux-#{new_resource.name}" do
     command "TERM=xterm-256color tmuxomatic #{tmuxomatic_config}"

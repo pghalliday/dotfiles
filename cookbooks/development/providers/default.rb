@@ -25,10 +25,18 @@ action :add do
     tee-with-timestamp
     grunt-mocha-test
     jira-project-analysis
+    tmuxomatic
+  }.each do |name|
+    project "development/#{name}" do
+      user new_resource.user
+      repository "git@github.com:pghalliday/#{name}.git"
+      email 'pghalliday@gmail.com'
+    end
+  end
+  %w{
     shiny-jira-project-analysis
     tasks
     pghalliday.github.io
-    tmuxomatic
   }.each do |name|
     project "development/#{name}" do
       user new_resource.user

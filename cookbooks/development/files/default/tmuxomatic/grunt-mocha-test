@@ -1,9 +1,0 @@
-window grunt-mocha-test
-
-AAB
-
-  foc
-  dir ~/development/grunt-mocha-test/
-A run vim README.md
-B run git status
-A foc
