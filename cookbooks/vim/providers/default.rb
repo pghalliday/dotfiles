@@ -59,4 +59,9 @@ action :add do
     group group
     mode 0644
   end
+  bash_rc 'vim' do
+    cookbook 'vim'
+    source 'vim.sh'
+    user new_resource.user
+  end
 end
