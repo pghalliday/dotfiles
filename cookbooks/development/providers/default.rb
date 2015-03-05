@@ -20,6 +20,7 @@ action :add do
   end
   %w{
     dotfiles
+    dotfiles-windows
     git-jira-utils
     tee-with-timestamp
     grunt-mocha-test
@@ -27,6 +28,7 @@ action :add do
     shiny-jira-project-analysis
     tasks
     pghalliday.github.io
+    tmuxomatic
   }.each do |name|
     project "development/#{name}" do
       user new_resource.user

@@ -1,0 +1,9 @@
+window tmuxomatic
+
+AAB
+
+  foc
+  dir ~/development/tmuxomatic/
+A run vim README.md
+B run git status
+A foc
