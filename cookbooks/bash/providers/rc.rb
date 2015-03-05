@@ -42,11 +42,23 @@ EOH
     group group
     mode 0755
   end
-  cookbook_file bashrcdsh do
-    cookbook new_resource.cookbook
-    source new_resource.source
-    owner new_resource.user
-    group group
-    mode 0644
+  if new_resource.source
+    cookbook_file bashrcdsh do
+      cookbook new_resource.cookbook
+      source new_resource.source
+      owner new_resource.user
+      group group
+      mode 0644
+    end
+  elsif new_resource.remote_file
+    remote_file bashrcdsh do
+      source new_resource.remote_file
+      checksum new_resource.checksum
+      owner new_resource.user
+      group group
+      mode 0644
+    end
+  else
+    Chef::Application.fatal!('bash_rc resource requires one of source or remote_file')
   end
 end

@@ -8,6 +8,7 @@
   "platforms": {
   },
   "dependencies": {
+    "bash": ">= 0.0.0"
   },
   "recommendations": {
   },
