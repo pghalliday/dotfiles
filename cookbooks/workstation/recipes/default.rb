@@ -101,16 +101,10 @@ tmux workstation_user
 
 # install tmuxomatic
 include_recipe 'tmuxomatic::default'
-workstation_cookbook_files.each do |entry|
-  parent_directory = ::File.basename(::File.dirname(entry['path']))
-  name = entry['name']
-  if parent_directory.eql? 'tmuxomatic'
-    tmuxomatic name do
-      source "tmuxomatic/#{name}"
-      user workstation_user
-    end
-  end
-end
+
+# install tmuxinator
+include_recipe 'tmuxinator::default'
+tmuxinator_init workstation_user
 
 # install snx
 include_recipe 'snx::default'

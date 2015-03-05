@@ -61,6 +61,8 @@ DEPENDENCIES
     path: cookbooks/theme
   tmux
     path: cookbooks/tmux
+  tmuxinator
+    path: cookbooks/tmuxinator
   tmuxomatic
     path: cookbooks/tmuxomatic
   vagrant
@@ -136,6 +138,8 @@ GRAPH
     gsettings (>= 0.0.0)
   tmux (0.1.0)
     bash (>= 0.0.0)
+  tmuxinator (0.1.0)
+    bash (>= 0.0.0)
   tmuxomatic (0.1.0)
     bash (>= 0.0.0)
     git (>= 0.0.0)
@@ -175,6 +179,7 @@ GRAPH
     syntastic (>= 0.0.0)
     theme (>= 0.0.0)
     tmux (>= 0.0.0)
+    tmuxinator (>= 0.0.0)
     tmuxomatic (>= 0.0.0)
     vagrant (>= 0.0.0)
     vim (>= 0.0.0)
