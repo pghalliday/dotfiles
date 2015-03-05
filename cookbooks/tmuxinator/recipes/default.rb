@@ -1,1 +1,1 @@
-gem_package 'tmuxinator'
+ruby_gem 'tmuxinator'

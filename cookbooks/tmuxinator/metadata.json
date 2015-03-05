@@ -8,7 +8,8 @@
   "platforms": {
   },
   "dependencies": {
-    "bash": ">= 0.0.0"
+    "bash": ">= 0.0.0",
+    "ruby": ">= 0.0.0"
   },
   "recommendations": {
   },
