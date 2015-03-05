@@ -19,6 +19,11 @@ action :add do
       source new_resource.tmuxomatic
       user new_resource.user
     end
+  else
+    tmuxomatic ::File.basename(dir) do
+      directory dir
+      user new_resource.user
+    end
   end
   if !new_resource.repository.nil?
     git_clone new_resource.repository do

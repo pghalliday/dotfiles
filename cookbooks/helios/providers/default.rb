@@ -63,8 +63,6 @@ action :add do
   end
   project 'development/helios/helios-jira-project-analysis' do
     user new_resource.user
-    cookbook 'helios'
-    tmuxomatic 'tmuxomatic/helios-jira-project-analysis'
     repository 'git@gitlab.upc.biz:phalliday/helios-jira-project-analysis.git'
     email 'phalliday@libertyglobal.com'
   end
