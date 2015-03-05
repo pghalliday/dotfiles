@@ -1,13 +1,24 @@
 %w{
   python3
-  python3-pip
+  pandoc
 }.each do |package_name|
   package package_name
 end
+
+tmuxomatic_dir = '/usr/local/src/tmuxomatic'
+
+directory tmuxomatic_dir
+
+git tmuxomatic_dir do
+  repository 'https://github.com/pghalliday/tmuxomatic.git'
+  notifies :run, 'bash[install tmuxomatic]', :immediately
+end
+
 bash 'install tmuxomatic' do
   code <<-EOH
-rm -rf /tmp/pip-build-root/
-pip3 install tmuxomatic --upgrade
-EOH
-  not_if {Mixlib::ShellOut.new('which tmuxomatic').run_command().status == 0}
+    pandoc -f markdown -t rst README.md -o README.rst
+    python3 setup.py install
+    EOH
+  cwd tmuxomatic_dir
+  action :nothing
 end
