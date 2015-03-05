@@ -140,6 +140,7 @@ GRAPH
     bash (>= 0.0.0)
   tmuxinator (0.1.0)
     bash (>= 0.0.0)
+    ruby (>= 0.0.0)
   tmuxomatic (0.1.0)
     bash (>= 0.0.0)
     git (>= 0.0.0)
