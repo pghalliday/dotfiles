@@ -7,3 +7,6 @@ package 'chefdk' do
   source chefdk_deb
   provider Chef::Provider::Package::Dpkg
 end
+gem_package 'knife-vsphere' do
+  gem_binary '/opt/chefdk/embedded/bin/gem'
+end
