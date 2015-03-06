@@ -25,27 +25,17 @@ action :add do
     group group
     mode 0755
   end
-  if new_resource.subshell
-    file bash_aliasesdsh do
-      content <<-EOH
-  function #{new_resource.name} {
-    (#{new_resource.command} ${@:#{new_resource.arg_offset + 1}})
-  }
-  EOH
-      owner new_resource.user
-      group group
-      mode 0644
-    end
-  else
-    file bash_aliasesdsh do
-      content <<-EOH
-  function #{new_resource.name} {
-    #{new_resource.command} ${@:#{new_resource.arg_offset + 1}}
-  }
-  EOH
-      owner new_resource.user
-      group group
-      mode 0644
-    end
+  command = "#{new_resource.command} ${@:#{new_resource.arg_offset + 1}}"
+  command = "command #{command}" if new_resource.force_system_command
+  command = "(#{command})" if new_resource.subshell
+  file bash_aliasesdsh do
+    content <<-EOH
+      function #{new_resource.name} {
+        #{command}
+      }
+      EOH
+    owner new_resource.user
+    group group
+    mode 0644
   end
 end
