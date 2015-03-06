@@ -78,7 +78,6 @@ include_recipe 'vim::default'
 vim workstation_user 
 %w{
 elzr/vim-json
-plasticboy/vim-markdown
 scrooloose/nerdtree
 tpope/vim-surround
 kchmck/vim-coffee-script
@@ -93,6 +92,7 @@ jistr/vim-nerdtree-tabs
   end
 end
 syntastic workstation_user
+vim_markdown workstation_user
 base16_vim workstation_user
 
 # install tmux
