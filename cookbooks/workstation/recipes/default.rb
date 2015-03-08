@@ -175,6 +175,12 @@ include_recipe 'blender::default'
 # install remmina
 include_recipe 'remmina::default'
 
+# install vlc
+include_recipe 'vlc::default'
+
+# install plex
+include_recipe 'plex::default'
+
 # set up development projects
 development workstation_user
 
