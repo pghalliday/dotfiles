@@ -181,6 +181,32 @@ include_recipe 'vlc::default'
 # install plex
 include_recipe 'plex::default'
 
+# set up unity launcher favourites
+gsettings 'com.canonical.Unity.Launcher' do
+  user workstation_user
+  key 'favorites'
+  value [
+    'application://gnome-terminal.desktop',
+    'application://nautilus.desktop',
+    'application://google-chrome.desktop',
+    'application://gcalctool.desktop',
+    'application://skype.desktop',
+    'application://plexhometheater.desktop',
+    'application://vlc.desktop',
+    'application://keepass2.desktop',
+    'application://virtualbox.desktop',
+    'application://blender.desktop',
+    'application://gimp.desktop',
+    'application://filezilla.desktop',
+    'application://ubuntu-software-center.desktop',
+    'application://unity-control-center.desktop',
+    'application://gnome-screenshot.desktop',
+    'unity://expo-icon',
+    'unity://devices',
+    'unity://running-apps'
+  ]
+end
+
 # set up development projects
 development workstation_user
 

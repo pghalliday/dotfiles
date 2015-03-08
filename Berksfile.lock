@@ -176,6 +176,7 @@ GRAPH
     filezilla (>= 0.0.0)
     gimp (>= 0.0.0)
     git (>= 0.0.0)
+    gsettings (>= 0.0.0)
     helios (>= 0.0.0)
     keepass2 (>= 0.0.0)
     libertyglobal (>= 0.0.0)
