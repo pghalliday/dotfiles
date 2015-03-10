@@ -1,0 +1,9 @@
+window helios-jira-project-analysis
+
+AAB
+
+  foc
+  dir ~/development/helios/jira-project-analysis/
+A run vim README.md
+B run git status
+A foc

@@ -61,9 +61,11 @@ action :add do
     repository 'git@gitlab.upc.biz:helios/development-infrastructure'
     email 'phalliday@libertyglobal.com'
   end
-  project 'development/helios/helios-jira-project-analysis' do
+  project 'development/helios/jira-project-analysis' do
     user new_resource.user
-    repository 'git@gitlab.upc.biz:phalliday/helios-jira-project-analysis.git'
+    cookbook 'helios'
+    tmuxomatic 'tmuxomatic/helios-jira-project-analysis'
+    repository 'git@gitlab.upc.biz:helios/jira-project-analysis.git'
     email 'phalliday@libertyglobal.com'
   end
   project 'development/helios/local-dev-vm-setup' do
