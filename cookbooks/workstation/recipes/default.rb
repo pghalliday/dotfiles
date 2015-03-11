@@ -199,7 +199,6 @@ gsettings 'com.canonical.Unity.Launcher' do
     'application://gimp.desktop',
     'application://filezilla.desktop',
     'application://ubuntu-software-center.desktop',
-    'application://update-manager.desktop',
     'application://unity-control-center.desktop',
     'application://gnome-screenshot.desktop',
     'unity://expo-icon',
