@@ -64,6 +64,9 @@ include_recipe 'nodejs::default'
 # install R
 include_recipe 'r::default'
 
+# install rust
+include_recipe 'rust::default'
+
 # install dropbox
 include_recipe 'dropbox::default'
 
