@@ -89,6 +89,8 @@ ekalinin/Dockerfile.vim
 vim-scripts/AutoComplPop
 scrooloose/nerdcommenter
 jistr/vim-nerdtree-tabs
+rust-lang/rust.vim
+cespare/vim-toml
 }.each do |plugin|
   vim_plugin plugin do
     user workstation_user
