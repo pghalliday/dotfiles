@@ -1,21 +1,26 @@
-include_recipe 'build-essential::default'
+tar_url = 'https://static.rust-lang.org/dist/rust-nightly-x86_64-unknown-linux-gnu.tar.gz'
+sha_url = 'https://static.rust-lang.org/dist/rust-nightly-x86_64-unknown-linux-gnu.tar.gz.sha256'
 
-src = '/usr/local/src/rust'
+sha_command = Mixlib::ShellOut.new("curl -L -s #{sha_url}")
+sha_command.run_command
+sha_command.error!
+sha = (/^([a-f0-9]*)/.match(sha_command.stdout))[1]
 
-directory src do
-  recursive true
+cache = Chef::Config[:file_cache_path]
+tar = ::File.join(cache, 'rust-nightly-x86_64-unknown-linux-gnu.tar.gz')
+dir = ::File.join(cache, 'rust-nightly-x86_64-unknown-linux-gnu')
+
+remote_file tar do
+  source tar_url
+  checksum sha
+  notifies :run, 'bash[install rust]', :immediately
 end
 
-git src do
-  repository 'https://github.com/rust-lang/rust.git'
-  notifies :run, 'bash[build and install rust]', :immediately
-end
-
-bash 'build and install rust' do
+bash 'install rust' do
   code <<-EOH
-    ./configure
-    make && make install
+    tar -zxf #{tar} -C #{cache}
+    cd #{dir}
+    ./install.sh
     EOH
-  cwd src
   action :nothing
 end
