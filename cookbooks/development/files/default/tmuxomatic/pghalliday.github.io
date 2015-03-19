@@ -4,7 +4,7 @@ window pghalliday_github_io
 AAB
 
   foc
-  dir ~/development/pghalliday.github.io/
+  dir ~/projects/pghalliday.github.io/
 A run vim README.md
 B run git status
 A foc

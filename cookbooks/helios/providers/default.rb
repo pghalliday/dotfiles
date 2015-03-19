@@ -5,20 +5,6 @@ end
 use_inline_resources
 
 action :add do
-  home = ::Dir.home(new_resource.user)
-  group = ::Etc.getpwnam(new_resource.user).gid
-  development = "#{home}/development"
-  helios = "#{development}/helios"
-  directory development do
-    owner new_resource.user
-    group group
-    mode 0755
-  end
-  directory helios do
-    owner new_resource.user
-    group group
-    mode 0755
-  end
   bash_alias 'h-mount' do
     user new_resource.user
     command 'sudo mount -t nfs -o proto=tcp,port=2049 192.168.50.3:/helios ~/development/helios/vm'
@@ -54,21 +40,21 @@ action :add do
     cookbook 'helios'
     source 'tmuxomatic/helios-application-framework'
   end
-  project 'development/helios/development-infrastructure' do
+  project 'helios/development-infrastructure' do
     user new_resource.user
     cookbook 'helios'
     tmuxomatic 'tmuxomatic/helios-development-infrastructure'
     repository 'git@gitlab.upc.biz:helios/development-infrastructure'
     email 'phalliday@libertyglobal.com'
   end
-  project 'development/helios/jira-project-analysis' do
+  project 'helios/jira-project-analysis' do
     user new_resource.user
     cookbook 'helios'
     tmuxomatic 'tmuxomatic/helios-jira-project-analysis'
     repository 'git@gitlab.upc.biz:helios/jira-project-analysis.git'
     email 'phalliday@libertyglobal.com'
   end
-  project 'development/helios/local-dev-vm-setup' do
+  project 'helios/local-dev-vm-setup' do
     user new_resource.user
     cookbook 'helios'
     tmuxomatic 'tmuxomatic/helios-local-dev-vm-setup'

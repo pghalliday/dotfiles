@@ -6,7 +6,7 @@ AAD
 BBD
 
   foc
-  dir ~/development/shiny-jira-project-analysis/
+  dir ~/projects/shiny-jira-project-analysis/
 A run vim README.md
 B run git status
 C run R
