@@ -5,7 +5,7 @@ AAB
 AAC
 
   foc
-  dir ~/development/helios/vm/development/helios/helios-application-framework/
+  dir ~/projects/helios/vm/development/helios/helios-application-framework/
 A run vim README.md
 B run h-ssh -t "cd ~/development/helios/helios-application-framework/; source ./sourceme; bash --login"
 C run minicom.USB0

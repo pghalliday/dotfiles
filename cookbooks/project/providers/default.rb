@@ -7,20 +7,30 @@ use_inline_resources
 action :add do
   home = ::Dir.home(new_resource.user)
   group = ::Etc.getpwnam(new_resource.user).gid
-  dir = ::File.join(home, new_resource.directory)
-  directory dir do
+  projects_dir = ::File.join(home, 'projects')
+  directory projects_dir do
     owner new_resource.user
     group group
-    mode 0755
   end
+  dir = new_resource.directory
+  path_components = dir.split(::File::SEPARATOR)
+  dir = projects_dir
+  path_components.each do |path_component|
+    dir = ::File.join(dir, path_component)
+    directory dir do
+      owner new_resource.user
+      group group
+    end
+  end
+  tmuxomatic_name = path_components.join('_')
   if !new_resource.tmuxomatic.nil?
-    tmuxomatic ::File.basename(new_resource.tmuxomatic) do
+    tmuxomatic tmuxomatic_name do
       cookbook new_resource.cookbook
       source new_resource.tmuxomatic
       user new_resource.user
     end
   else
-    tmuxomatic ::File.basename(dir) do
+    tmuxomatic tmuxomatic_name do
       directory dir
       user new_resource.user
     end

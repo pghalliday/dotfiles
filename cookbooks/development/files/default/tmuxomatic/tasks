@@ -6,7 +6,7 @@ AAD
 BBD
 
   foc
-  dir ~/development/tasks/
+  dir ~/projects/tasks/
 A run vim README.md
 B run git status
 C run fig up

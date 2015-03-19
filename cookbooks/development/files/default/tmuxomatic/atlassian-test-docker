@@ -1,0 +1,11 @@
+window atlassian-test-docker
+
+AAB
+AAC
+
+  foc
+  dir ~/projects/atlassian-test-docker/
+A run vim README.md
+B run docker-compose ps
+C run git status
+A foc
