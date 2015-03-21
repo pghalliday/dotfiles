@@ -1,7 +1,7 @@
 tar_url = 'https://static.rust-lang.org/dist/rust-nightly-x86_64-unknown-linux-gnu.tar.gz'
 sha_url = 'https://static.rust-lang.org/dist/rust-nightly-x86_64-unknown-linux-gnu.tar.gz.sha256'
 
-sha_command = Mixlib::ShellOut.new("curl -L -s #{sha_url}")
+sha_command = Mixlib::ShellOut.new("wget -O- #{sha_url}")
 sha_command.run_command
 sha_command.error!
 sha = (/^([a-f0-9]*)/.match(sha_command.stdout))[1]
