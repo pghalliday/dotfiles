@@ -18,10 +18,8 @@ bash 'install VirtualBox extension pack' do
     shasums_url=https://www.virtualbox.org/download/hashes/${versions[0]}
     extpack=Oracle_VM_VirtualBox_Extension_Pack-${versions[0]}-${versions[1]}.vbox-extpack
     extpack_url=http://download.virtualbox.org/virtualbox/${versions[0]}
-    wget -O SHA256SUMS ${shasums_url}/SHA256SUMS
     wget -O ${extpack} ${extpack_url}/${extpack}
-    grep ${extpack} SHA256SUMS > SHA256SUM
-    sha256sum -c SHA256SUM
+    wget -O - ${shasums_url}/SHA256SUMS | grep ${extpack} | sha256sum -c
     VBoxManage extpack install --replace ${extpack}
   EOH
   cwd cache
