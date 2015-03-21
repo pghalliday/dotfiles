@@ -4,6 +4,7 @@ apt_repository 'virtualbox' do
   components ['contrib']
   key 'https://www.virtualbox.org/download/oracle_vbox.asc'
 end
+package 'dkms'
 package 'virtualbox-4.3' do
   timeout 1800
 end
