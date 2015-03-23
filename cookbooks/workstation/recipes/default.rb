@@ -143,6 +143,7 @@ include_recipe 'vagrant::default'
 %w{
   vagrant-omnibus
   vagrant-berkshelf
+  vagrant-aws
 }.each do |vagrant_plugin_name|
   vagrant_plugin vagrant_plugin_name do
     user workstation_user
