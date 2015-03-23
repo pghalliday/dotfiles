@@ -17,6 +17,7 @@ action :add do
     tee-with-timestamp
     grunt-mocha-test
     jira-project-analysis
+    atlassian-test
     tmuxomatic
   }.each do |name|
     project "#{name}" do

@@ -7,11 +7,11 @@ use_inline_resources
 action :add do
   bash_alias 'h-mount' do
     user new_resource.user
-    command 'sudo mount -t nfs -o proto=tcp,port=2049 192.168.50.3:/helios ~/development/helios/vm'
+    command 'sudo mount -t nfs -o proto=tcp,port=2049 192.168.50.3:/helios ~/projects/helios/vm'
   end
   bash_alias 'h-umount' do
     user new_resource.user
-    command 'sudo umount ~/development/helios/vm'
+    command 'sudo umount ~/projects/helios/vm'
   end
   bash_alias 'h-ssh' do
     user new_resource.user
@@ -19,7 +19,7 @@ action :add do
   end
   bash_alias 'h-cd' do
     user new_resource.user
-    command 'cd ~/development/helios/vm'
+    command 'cd ~/projects/helios/vm'
   end
   bash_alias 'helios-release-analysis' do
     user new_resource.user
@@ -60,5 +60,10 @@ action :add do
     tmuxomatic 'tmuxomatic/helios-local-dev-vm-setup'
     repository 'git@gitlab.upc.biz:helios/local-dev-vm-setup.git'
     email 'phalliday@libertyglobal.com'
+  end
+
+  # dummy project for VM mount point
+  project 'helios/vm' do
+    user new_resource.user
   end
 end
