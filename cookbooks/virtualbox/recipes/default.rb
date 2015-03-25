@@ -9,7 +9,7 @@ end
 package 'dkms'
 package 'virtualbox-4.3' do
   timeout 1800
-  notifies :run, 'bash [install VirtualBox extension pack]', :immediately
+  notifies :run, 'bash[install VirtualBox extension pack]', :immediately
 end
 bash 'install VirtualBox extension pack' do
   code <<-EOH
