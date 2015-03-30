@@ -1,0 +1,2 @@
+export AWS_CLOUDFORMATION_HOME=/opt/AWSCloudFormation
+export PATH=$PATH:$AWS_CLOUDFORMATION_HOME/bin

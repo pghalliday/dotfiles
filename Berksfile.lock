@@ -1,4 +1,6 @@
 DEPENDENCIES
+  aws
+    path: cookbooks/aws
   base16-shell
     path: cookbooks/base16-shell
   base16-vim
@@ -29,6 +31,8 @@ DEPENDENCIES
     path: cookbooks/gsettings
   helios
     path: cookbooks/helios
+  java
+    path: cookbooks/java
   keepass2
     path: cookbooks/keepass2
   libertyglobal
@@ -86,6 +90,8 @@ DEPENDENCIES
 
 GRAPH
   apt (2.6.1)
+  aws (0.1.0)
+    bash (>= 0.0.0)
   base16-shell (0.1.0)
     bash (>= 0.0.0)
   base16-vim (0.1.0)
@@ -117,6 +123,8 @@ GRAPH
     bash (>= 0.0.0)
     project (>= 0.0.0)
     tmuxomatic (>= 0.0.0)
+  java (0.1.0)
+    bash (>= 0.0.0)
   keepass2 (0.1.0)
   libertyglobal (0.1.0)
     bash (>= 0.0.0)
@@ -170,6 +178,7 @@ GRAPH
     s3_file (>= 0.0.0)
   workstation (0.1.0)
     apt (>= 0.0.0)
+    aws (>= 0.0.0)
     base16-shell (>= 0.0.0)
     base16-vim (>= 0.0.0)
     bash (>= 0.0.0)
@@ -185,6 +194,7 @@ GRAPH
     git (>= 0.0.0)
     gsettings (>= 0.0.0)
     helios (>= 0.0.0)
+    java (>= 0.0.0)
     keepass2 (>= 0.0.0)
     libertyglobal (>= 0.0.0)
     meld (>= 0.0.0)

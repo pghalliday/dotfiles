@@ -61,6 +61,14 @@ chefdk workstation_user
 # install nodejs
 include_recipe 'nodejs::default'
 
+# install java
+include_recipe 'java::default'
+java workstation_user
+
+# install AWS tools
+include_recipe 'aws::default'
+aws workstation_user
+
 # install R
 include_recipe 'r::default'
 
