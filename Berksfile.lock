@@ -47,6 +47,8 @@ DEPENDENCIES
     path: cookbooks/plex
   project
     path: cookbooks/project
+  python
+    path: cookbooks/python
   r
     path: cookbooks/r
   remmina
@@ -141,6 +143,7 @@ GRAPH
     bash (>= 0.0.0)
     git (>= 0.0.0)
     tmuxomatic (>= 0.0.0)
+  python (0.1.0)
   r (0.1.0)
     apt (>= 0.0.0)
   remmina (0.1.0)
@@ -201,6 +204,7 @@ GRAPH
     minicom (>= 0.0.0)
     nodejs (>= 0.0.0)
     plex (>= 0.0.0)
+    python (>= 0.0.0)
     r (>= 0.0.0)
     remmina (>= 0.0.0)
     ruby (>= 0.0.0)
