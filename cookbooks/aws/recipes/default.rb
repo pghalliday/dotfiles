@@ -14,3 +14,9 @@ bash 'install AWS Cloud Formation CLI tools' do
   cwd installdir
   action :nothing
 end
+bash 'install AWS CLI tools' do
+  code <<-EOH
+  pip install awscli
+  EOH
+  not_if { ::File.exist?('/usr/bin/aws') }
+end

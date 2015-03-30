@@ -48,7 +48,8 @@
     "gsettings": ">= 0.0.0",
     "rust": ">= 0.0.0",
     "java": ">= 0.0.0",
-    "aws": ">= 0.0.0"
+    "aws": ">= 0.0.0",
+    "python": ">= 0.0.0"
   },
   "recommendations": {
   },

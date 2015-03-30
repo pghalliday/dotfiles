@@ -65,6 +65,9 @@ include_recipe 'nodejs::default'
 include_recipe 'java::default'
 java workstation_user
 
+# install python
+include_recipe 'python::default'
+
 # install AWS tools
 include_recipe 'aws::default'
 aws workstation_user
