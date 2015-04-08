@@ -1,0 +1,19 @@
+{
+  "vmName": "HeliosBuildVM_v009",
+  "gitUserName": "Peter Halliday",
+  "gitUserEmail": "phalliday@libertyglobal.com",
+  "ethernetBridge": "eth4",
+  "hostOnlyNetwork": "vboxnet0",
+  "gitlabPrivateKey": "~/.ssh/id_rsa",
+  "hostPrivateKey": "~/.ssh/id_rsa",
+  "hostPublicKey": "~/.ssh/id_rsa.pub",
+  "workspaceDirectory": "projects",
+  "stbs": {
+    "stb1": {
+      "macAddress": "94:3b:b1:1f:25:aa",
+      "ipAddressSuffix": "1",
+      "mode": "NFS",
+      "mockName": "LINK"
+    }
+  }
+}
