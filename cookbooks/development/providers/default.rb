@@ -18,6 +18,7 @@ action :add do
     grunt-mocha-test
     jira-project-analysis
     atlassian-test
+    atlassian-test-aws
     tmuxomatic
   }.each do |name|
     project "#{name}" do
