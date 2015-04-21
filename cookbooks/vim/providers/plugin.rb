@@ -12,6 +12,7 @@ action :add do
   name = ::File.basename(new_resource.github)
   plugin = "#{vim_bundle}/#{name}"
   repository = "https://github.com/#{new_resource.github}"
+  revision = new_resource.revision
   directory vim_dir do
     owner new_resource.user
     group group
@@ -25,6 +26,7 @@ action :add do
   git plugin do
     repository repository
     user new_resource.user
+    revision revision
     group group
   end
 end
