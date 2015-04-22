@@ -54,6 +54,18 @@ action :add do
       email 'pghalliday@gmail.com'
     end
   end
+  %w{
+    r
+    shiny-server
+    sonarqube
+    sonarqube-mysql
+  }.each do |name|
+    project "cookbooks/#{name}" do
+      user new_resource.user
+      repository "git@github.com:pghalliday-cookbooks/#{name}.git"
+      email 'pghalliday@gmail.com'
+    end
+  end
   bash_alias 'tee-with-timestamp' do
     user new_resource.user
     command '~/development/tee-with-timestamp/tee-with-timestamp.sh'
