@@ -68,18 +68,18 @@ action :add do
   end
   bash_alias 'tee-with-timestamp' do
     user new_resource.user
-    command '~/development/tee-with-timestamp/tee-with-timestamp.sh'
+    command '~/projects/tee-with-timestamp/tee-with-timestamp.sh'
   end
   bash_alias 'git-jira-utils-branch-commits' do
     user new_resource.user
-    command '~/development/git-jira-utils/branch-commits.sh'
+    command '~/projects/git-jira-utils/branch-commits.sh'
   end
   bash_alias 'git-jira-utils-diff-commits' do
     user new_resource.user
-    command '~/development/git-jira-utils/diff-commits.sh'
+    command '~/projects/git-jira-utils/diff-commits.sh'
   end
   bash_alias 'git-jira-utils-release-analysis' do
     user new_resource.user
-    command '~/development/git-jira-utils/release-analysis.sh'
+    command '~/projects/git-jira-utils/release-analysis.sh'
   end
 end
