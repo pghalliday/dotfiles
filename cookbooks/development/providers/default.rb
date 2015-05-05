@@ -20,6 +20,7 @@ action :add do
     atlassian-test
     atlassian-test-aws
     tmuxomatic
+    infused
   }.each do |name|
     project "#{name}" do
       user new_resource.user
