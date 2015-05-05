@@ -78,6 +78,14 @@ include_recipe 'r::default'
 # install rust
 include_recipe 'rust::default'
 
+# install android sdk
+include_recipe 'android-sdk::default'
+android_sdk workstation_user
+
+# install android studio
+include_recipe 'android-studio::default'
+android_studio workstation_user
+
 # install dropbox
 include_recipe 'dropbox::default'
 

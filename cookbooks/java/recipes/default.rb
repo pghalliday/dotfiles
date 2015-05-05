@@ -1,4 +1,4 @@
-package 'openjdk-8-jre-headless'
+package 'openjdk-8-jdk'
 
 # workaround for broken java cacerts
 bash 'install java cacerts' do

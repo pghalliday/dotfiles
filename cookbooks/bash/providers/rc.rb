@@ -50,6 +50,15 @@ EOH
       group group
       mode 0644
     end
+  elsif new_resource.template
+    template bashrcdsh do
+      cookbook new_resource.cookbook
+      source new_resource.template
+      variables new_resource.variables
+      owner new_resource.user
+      group group
+      mode 0644
+    end
   elsif new_resource.remote_file
     remote_file bashrcdsh do
       source new_resource.remote_file
