@@ -13,4 +13,11 @@ action :add do
       home: ::File.join(node['android-sdk']['install_dir'], 'current')
     )
   end
+
+  android_sdk_avd 'default' do
+    user new_resource.user
+    target 'Google Inc.:Google APIs:22'
+    skin 'WXGA720'
+    abi 'google_apis/x86_64'
+  end
 end

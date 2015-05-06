@@ -23,8 +23,36 @@ bash 'install android sdk' do
   code <<-EOH
     tar zxf #{tar} -C #{install_dir}
     mv #{untarred_dir} #{dir}
+    chown -R root:root #{dir}
+    cd #{dir}
+    find tools -maxdepth 1 -perm -100 -type f -print0 | xargs -0 chmod a+x
     EOH
   not_if { ::File.exist?(dir) }
+end
+
+android_sdk_package 'platform-tools' do
+  android_home dir
+  creates ::File.join(dir, 'platform-tools')
+end
+
+android_sdk_package 'build-tools-22.0.1' do
+  android_home dir
+  creates ::File.join(dir, 'build-tools/22.0.1')
+end
+
+android_sdk_package 'android-22' do
+  android_home dir
+  creates ::File.join(dir, 'platforms/android-22')
+end
+
+android_sdk_package 'addon-google_apis-google-22' do
+  android_home dir
+  creates ::File.join(dir, 'add-ons/addon-google_apis-google-22')
+end
+
+android_sdk_package 'sys-img-x86_64-addon-google_apis-google-22' do
+  android_home dir
+  creates ::File.join(dir, 'system-images/android-22/google_apis/x86_64')
 end
 
 link current_dir do

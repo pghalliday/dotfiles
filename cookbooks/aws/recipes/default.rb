@@ -18,5 +18,5 @@ bash 'install AWS CLI tools' do
   code <<-EOH
   pip install awscli
   EOH
-  not_if { ::File.exist?('/usr/bin/aws') }
+  not_if { ::File.exist?('/usr/local/bin/aws') }
 end
