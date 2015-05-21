@@ -110,6 +110,7 @@ scrooloose/nerdcommenter
 jistr/vim-nerdtree-tabs
 rust-lang/rust.vim
 cespare/vim-toml
+groenewege/vim-less
 }.each do |plugin|
   vim_plugin plugin do
     user workstation_user
