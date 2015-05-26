@@ -8,6 +8,10 @@ action :add do
   home = ::Dir.home(new_resource.user)
   group = ::Etc.getpwnam(new_resource.user).gid
   config_dir = "#{home}/.config"
+  directory config_dir do
+    owner new_resource.user
+    group group
+  end
   install_dir = "#{config_dir}/bash-git-prompt"
   bash_rc 'bash-git-prompt' do
     cookbook 'bash-git-prompt'
