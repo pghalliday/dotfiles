@@ -43,6 +43,17 @@ action :add do
     end
   end
   %w{
+    LibertyGlobal-CoderDojo.github.io
+  }.each do |name|
+    project "LibertyGlobal-CoderDojo/#{name}" do
+      user new_resource.user
+      cookbook 'development'
+      tmuxomatic "tmuxomatic/#{name}"
+      repository "git@github.com:LibertyGlobal-CoderDojo/#{name}.git"
+      email 'pghalliday@gmail.com'
+    end
+  end
+  %w{
     crowd
     jira
     stash
