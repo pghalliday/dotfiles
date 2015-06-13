@@ -14,6 +14,9 @@ ssh workstation_user do
   aws_secret_access_key workstation_aws_secret_access_key
 end
 
+# install wget
+package 'wget'
+
 # install bash
 include_recipe 'bash::default'
 bash_init workstation_user
