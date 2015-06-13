@@ -35,6 +35,10 @@ DEPENDENCIES
     path: cookbooks/gsettings
   helios
     path: cookbooks/helios
+  homebrew
+    git: https://github.com/kbruner/homebrew.git
+    revision: 611c10a2dd3c92a0493a9205c1bebd5b5301da5b
+    branch: issue71
   java
     path: cookbooks/java
   keepass2
@@ -131,6 +135,8 @@ GRAPH
     bash (>= 0.0.0)
     project (>= 0.0.0)
     tmuxomatic (>= 0.0.0)
+  homebrew (1.12.0)
+    build-essential (>= 2.1.2)
   java (0.1.0)
     bash (>= 0.0.0)
   keepass2 (0.1.0)
@@ -205,6 +211,7 @@ GRAPH
     git (>= 0.0.0)
     gsettings (>= 0.0.0)
     helios (>= 0.0.0)
+    homebrew (>= 0.0.0)
     java (>= 0.0.0)
     keepass2 (>= 0.0.0)
     libertyglobal (>= 0.0.0)

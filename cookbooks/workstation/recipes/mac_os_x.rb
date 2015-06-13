@@ -1,7 +1,10 @@
 workstation_user = node['workstation']['user']
 
+# install homebrew
+include_recipe 'homebrew::default'
+
 # install bash
-include_recipe 'bash'
+include_recipe 'bash::default'
 bash_init workstation_user
 bash_profile workstation_user
 

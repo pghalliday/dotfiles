@@ -1,6 +1,7 @@
 name 'workstation'
 version '0.1.0'
 depends 'apt'
+depends 'homebrew'
 depends 'tmuxomatic'
 depends 'base16-shell'
 depends 'bash-git-prompt'
