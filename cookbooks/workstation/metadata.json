@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "apt": ">= 0.0.0",
+    "homebrew": ">= 0.0.0",
     "tmuxomatic": ">= 0.0.0",
     "base16-shell": ">= 0.0.0",
     "bash-git-prompt": ">= 0.0.0",
