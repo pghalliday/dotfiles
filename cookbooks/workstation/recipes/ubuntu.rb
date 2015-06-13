@@ -54,7 +54,7 @@ meld_init workstation_user
 # install ruby
 include_recipe 'ruby::default'
 
-# install chefdk (not till we can run this recipe without having chefdk already installed)
+# install chefdk
 include_recipe 'chefdk::default'
 chefdk workstation_user
 

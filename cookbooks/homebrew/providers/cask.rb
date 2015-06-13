@@ -16,18 +16,20 @@ end
 
 action :install do
   unless @cask.casked
+    user = new_resource.use_homebrew_owner ? homebrew_owner : nil
     execute "installing cask #{new_resource.name}" do
-      command "/usr/local/bin/brew cask install #{new_resource.name}"
-      user homebrew_owner
+      command "/usr/local/bin/brew cask install #{new_resource.name} #{new_resource.options}"
+      user user
     end
   end
 end
 
 action :uninstall do
   if @cask.casked
+    user = new_resource.use_homebrew_owner ? homebrew_owner : nil
     execute "uninstalling cask #{new_resource.name}" do
       command "/usr/local/bin/brew cask uninstall #{new_resource.name}"
-      user homebrew_owner
+      user user
     end
   end
 end

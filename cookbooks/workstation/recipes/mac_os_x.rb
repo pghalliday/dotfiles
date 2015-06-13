@@ -5,6 +5,7 @@ workstation_aws_secret_access_key = node['workstation']['aws_secret_access_key']
 
 # install homebrew
 include_recipe 'homebrew::default'
+include_recipe 'homebrew::cask'
 
 # setup ssh and keys
 include_recipe 'ssh::default'
@@ -27,6 +28,15 @@ include_recipe 'git::default'
 git_init workstation_user do
   user_name 'Peter Halliday'
 end
+
+# install iterm2
+homebrew_cask 'iterm2' do
+  options '--appdir=/Applications'
+end
+
+# install chefdk
+include_recipe 'chefdk::default'
+chefdk workstation_user
 
 vim workstation_user
 %w{
