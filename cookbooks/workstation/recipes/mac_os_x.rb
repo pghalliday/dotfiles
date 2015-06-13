@@ -22,6 +22,12 @@ include_recipe 'bash::default'
 bash_init workstation_user
 bash_profile workstation_user
 
+# install git
+include_recipe 'git::default'
+git_init workstation_user do
+  user_name 'Peter Halliday'
+end
+
 vim workstation_user
 %w{
 elzr/vim-json
