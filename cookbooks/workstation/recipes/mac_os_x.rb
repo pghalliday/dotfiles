@@ -1,7 +1,18 @@
 workstation_user = node['workstation']['user']
+workstation_aws_s3_bucket = node['workstation']['aws_s3_bucket']
+workstation_aws_access_key_id = node['workstation']['aws_access_key_id']
+workstation_aws_secret_access_key = node['workstation']['aws_secret_access_key']
 
 # install homebrew
 include_recipe 'homebrew::default'
+
+# setup ssh and keys
+include_recipe 'ssh::default'
+ssh workstation_user do
+  aws_s3_bucket workstation_aws_s3_bucket
+  aws_access_key_id workstation_aws_access_key_id
+  aws_secret_access_key workstation_aws_secret_access_key
+end
 
 # install bash
 include_recipe 'bash::default'
