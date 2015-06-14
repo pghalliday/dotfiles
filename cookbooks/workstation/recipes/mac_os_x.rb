@@ -38,6 +38,9 @@ end
 include_recipe 'chefdk::default'
 chefdk workstation_user
 
+# install nodejs
+include_recipe 'nodejs::default'
+
 vim workstation_user
 %w{
 elzr/vim-json
