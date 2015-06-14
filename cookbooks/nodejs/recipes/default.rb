@@ -1,10 +1,9 @@
-apt_repository 'nodejs' do
-  uri          'https://deb.nodesource.com/node'
-  distribution node['lsb']['codename']
-  components   ['main']
-  key          'https://deb.nodesource.com/gpgkey/nodesource.gpg.key'
+case node['platform']
+when 'ubuntu'
+  include_recipe 'nodejs::ubuntu'
+when 'mac_os_x'
+  include_recipe 'nodejs::mac_os_x'
 end
-package 'nodejs'
 
 n_installed = Mixlib::ShellOut.new('which n')
 n_installed.run_command
