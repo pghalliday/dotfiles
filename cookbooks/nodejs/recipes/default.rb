@@ -25,3 +25,17 @@ bash 'install latest' do
   code 'n latest'
   only_if {latest_installed.error?}
 end
+
+stable_io_installed = Mixlib::ShellOut.new('which n && n io bin $(n io --stable)')
+stable_io_installed.run_command
+bash 'install io stable' do
+  code 'n io stable'
+  only_if {stable_io_installed.error?}
+end
+
+latest_io_installed = Mixlib::ShellOut.new('which n && n io bin $(n io --latest)')
+latest_io_installed.run_command
+bash 'install io latest' do
+  code 'n io latest'
+  only_if {latest_io_installed.error?}
+end

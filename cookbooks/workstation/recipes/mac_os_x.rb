@@ -64,8 +64,22 @@ syntastic workstation_user
 vim_markdown workstation_user
 base16_vim workstation_user
 
+# install tmux
+include_recipe 'tmux::default'
+tmux workstation_user
+
+# install tmuxomatic
+include_recipe 'tmuxomatic::default'
+
+# install tmuxinator
+include_recipe 'tmuxinator::default'
+tmuxinator_init workstation_user
+
 # install base16-shell
 base16_shell workstation_user
 
 # install bash-git-prompt
 bash_git_prompt workstation_user
+
+# checkout projects
+development workstation_user
