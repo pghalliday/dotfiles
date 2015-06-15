@@ -17,6 +17,9 @@ action :add do
     tee-with-timestamp
     grunt-mocha-test
     jira-project-analysis
+    jira-search
+    jira-requirements-data
+    jira-requirements-report
     atlassian-test
     atlassian-test-aws
     tmuxomatic
