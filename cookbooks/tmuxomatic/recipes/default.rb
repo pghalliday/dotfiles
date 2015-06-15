@@ -7,7 +7,9 @@ end
 
 tmuxomatic_dir = '/usr/local/src/tmuxomatic'
 
-directory tmuxomatic_dir
+directory tmuxomatic_dir do
+  recursive true
+end
 
 git tmuxomatic_dir do
   repository 'https://github.com/pghalliday/tmuxomatic.git'
