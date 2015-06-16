@@ -1,0 +1,12 @@
+window jira-requirements-report
+
+AAB
+AAC
+
+  foc
+  dir ~/projects/jira-requirements-report/
+A run vim README.md
+B run git status
+C run npm install
+C run npm start
+A foc
