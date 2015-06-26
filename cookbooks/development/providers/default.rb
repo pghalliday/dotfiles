@@ -18,8 +18,8 @@ action :add do
     grunt-mocha-test
     jira-project-analysis
     jira-search
+    jira-sprints
     jira-requirements-data
-    jira-requirements-report
     atlassian-test
     atlassian-test-aws
     tmuxomatic
@@ -34,6 +34,7 @@ action :add do
   %w{
     shiny-jira-project-analysis
     tasks
+    jira-requirements-report
     pghalliday.github.io
     atlassian-test-docker
   }.each do |name|
