@@ -18,6 +18,7 @@ action :add do
     grunt-mocha-test
     jira-project-analysis
     jira-search
+    jira-sprints
     jira-requirements-data
     atlassian-test
     atlassian-test-aws
