@@ -20,6 +20,7 @@ action :add do
     jira-search
     jira-sprints
     jira-requirements-data
+    syslog-publisher
     atlassian-test
     atlassian-test-aws
     tmuxomatic
