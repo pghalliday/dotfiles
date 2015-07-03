@@ -8,5 +8,6 @@ AAC
 A run vim README.md
 B run git status
 C run npm install
-C run npm start
+C run bundle install
+C run bundle exec guard
 A foc
