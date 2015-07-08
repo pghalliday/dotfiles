@@ -112,6 +112,7 @@ rust-lang/rust.vim
 cespare/vim-toml
 groenewege/vim-less
 nathanaelkane/vim-indent-guides
+digitaltoad/vim-jade
 }.each do |plugin|
   vim_plugin plugin do
     user workstation_user
