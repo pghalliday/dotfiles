@@ -111,6 +111,7 @@ jistr/vim-nerdtree-tabs
 rust-lang/rust.vim
 cespare/vim-toml
 groenewege/vim-less
+nathanaelkane/vim-indent-guides
 }.each do |plugin|
   vim_plugin plugin do
     user workstation_user
