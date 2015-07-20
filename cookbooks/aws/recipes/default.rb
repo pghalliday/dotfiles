@@ -1,3 +1,7 @@
+case node['platform']
+when 'ubuntu'
+  include_recipe 'aws::ubuntu'
+end
 zipfile = "#{Chef::Config[:file_cache_path]}/AWSCloudFormation-cli.zip"
 installdir = '/opt'
 remote_file zipfile do
@@ -5,7 +9,6 @@ remote_file zipfile do
   checksum '382e3e951833fd77235fae41c1742224d68bdf165e1ace4200ee88c01ac29a90'
   notifies :run, 'bash[install AWS Cloud Formation CLI tools]', :immediately
 end
-package 'unzip'
 bash 'install AWS Cloud Formation CLI tools' do
   code <<-EOH
   unzip #{zipfile}

@@ -1,2 +1,5 @@
 package 'python'
-package 'python-pip'
+case node['platform']
+when 'ubuntu'
+  include_recipe 'python::ubuntu'
+end
