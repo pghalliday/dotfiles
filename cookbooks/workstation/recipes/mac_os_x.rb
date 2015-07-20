@@ -41,6 +41,13 @@ chefdk workstation_user
 # install nodejs
 include_recipe 'nodejs::default'
 
+# install python
+include_recipe 'python::default'
+
+# install AWS tools
+include_recipe 'aws::default'
+aws workstation_user
+
 vim workstation_user
 %w{
 elzr/vim-json
@@ -85,3 +92,9 @@ bash_git_prompt workstation_user
 
 # checkout projects
 development workstation_user
+
+# set up libertyglobal projects
+libertyglobal workstation_user
+
+# set up Helios projects
+helios workstation_user
