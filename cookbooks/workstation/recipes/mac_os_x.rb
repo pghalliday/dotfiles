@@ -90,6 +90,22 @@ base16_shell workstation_user
 # install bash-git-prompt
 bash_git_prompt workstation_user
 
+# install vagrant and plugins
+include_recipe 'vagrant::default'
+%w{
+  vagrant-omnibus
+  vagrant-berkshelf
+  vagrant-aws
+}.each do |vagrant_plugin_name|
+  vagrant_plugin vagrant_plugin_name do
+    user workstation_user
+  end
+end
+
+# install virtualbox
+include_recipe 'virtualbox::default'
+virtualbox workstation_user
+
 # checkout projects
 development workstation_user
 
