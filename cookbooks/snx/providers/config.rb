@@ -23,7 +23,7 @@ action :add do
     mode 0644
   end
   bash_alias "snx.#{new_resource.name}" do
-    command "snx -f #{snx_config} && sudo ifconfig tunsnx mtu 1350"
+    command "snx -f #{snx_config}"
     user new_resource.user
   end
 end
