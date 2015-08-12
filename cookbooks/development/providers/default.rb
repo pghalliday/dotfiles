@@ -25,7 +25,7 @@ action :add do
     atlassian-test-aws
     tmuxomatic
     infused
-    aws_deploy
+    formatron
   }.each do |name|
     project "#{name}" do
       user new_resource.user
