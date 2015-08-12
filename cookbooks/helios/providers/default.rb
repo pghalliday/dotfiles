@@ -80,6 +80,22 @@ action :add do
     email 'phalliday@libertyglobal.com'
   end
 
+  %w{
+    global
+    vpc
+    rds
+    opsworks-hub
+    reverse-proxy
+    gitlab
+    splunk
+  }.each do |name|
+    project "helios-aws/#{name}" do
+      user new_resource.user
+      repository "git@gitlab.upc.biz:helios-aws/#{name}.git"
+      email 'phalliday@libertyglobal.com'
+    end
+  end
+
   # dummy project for VM mount point
   project 'helios/vm' do
     user user
