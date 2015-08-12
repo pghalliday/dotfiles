@@ -77,6 +77,9 @@ action :add do
     shiny-server
     sonarqube
     sonarqube-mysql
+    opsworks_hub
+    aws_cli
+    opsworks_private_dns
   }.each do |name|
     project "cookbooks/#{name}" do
       user new_resource.user
