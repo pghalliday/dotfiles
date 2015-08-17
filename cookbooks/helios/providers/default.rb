@@ -88,6 +88,7 @@ action :add do
     reverse-proxy
     gitlab
     splunk
+    zabbix
   }.each do |name|
     project "helios-aws/#{name}" do
       user new_resource.user
