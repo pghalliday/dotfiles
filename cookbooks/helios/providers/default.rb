@@ -89,6 +89,8 @@ action :add do
     gitlab
     splunk
     zabbix
+    zenoss
+    nagios
   }.each do |name|
     project "helios-aws/#{name}" do
       user new_resource.user
