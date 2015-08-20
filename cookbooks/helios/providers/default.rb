@@ -90,6 +90,7 @@ action :add do
     splunk
     zabbix
     nagios
+    chef-server
   }.each do |name|
     project "helios-aws/#{name}" do
       user new_resource.user
