@@ -83,14 +83,18 @@ action :add do
   %w{
     global
     vpc
-    rds
+    chef-server
+    bastion
+    nat
+    ldapjs-crowd-server
     opsworks-hub
     reverse-proxy
-    gitlab
-    splunk
-    zabbix
     nagios
-    chef-server
+    elk
+    splunk
+    rds
+    gitlab
+    zabbix
   }.each do |name|
     project "helios-aws/#{name}" do
       user new_resource.user
