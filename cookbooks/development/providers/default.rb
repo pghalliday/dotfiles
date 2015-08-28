@@ -25,7 +25,6 @@ action :add do
     atlassian-test-aws
     tmuxomatic
     infused
-    formatron
   }.each do |name|
     project "#{name}" do
       user new_resource.user
@@ -39,6 +38,7 @@ action :add do
     jira-requirements-report
     pghalliday.github.io
     atlassian-test-docker
+    formatron
   }.each do |name|
     project "#{name}" do
       user new_resource.user
