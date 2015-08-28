@@ -1,0 +1,11 @@
+window formatron
+
+AAB
+AAC
+
+  foc
+  dir ~/projects/formatron/
+A run vim README.md
+B run bundle exec guard
+C run git status
+A foc
