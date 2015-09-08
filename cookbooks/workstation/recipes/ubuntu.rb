@@ -113,6 +113,8 @@ cespare/vim-toml
 groenewege/vim-less
 nathanaelkane/vim-indent-guides
 digitaltoad/vim-jade
+maksimr/vim-jsbeautify
+pangloss/vim-javascript
 }.each do |plugin|
   vim_plugin plugin do
     user workstation_user
