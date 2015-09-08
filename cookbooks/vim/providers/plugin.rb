@@ -27,6 +27,7 @@ action :add do
     repository repository
     user new_resource.user
     revision revision
+    enable_submodules true
     group group
   end
 end
