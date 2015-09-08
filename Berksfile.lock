@@ -86,6 +86,8 @@ DEPENDENCIES
     path: cookbooks/vagrant
   vim
     path: cookbooks/vim
+  vim-jsbeautify
+    path: cookbooks/vim-jsbeautify
   vim-markdown
     path: cookbooks/vim-markdown
   virtualbox
@@ -184,6 +186,8 @@ GRAPH
   vagrant (0.1.0)
   vim (0.1.0)
     bash (>= 0.0.0)
+  vim-jsbeautify (0.1.0)
+    vim (>= 0.0.0)
   vim-markdown (0.1.0)
     vim (>= 0.0.0)
   virtualbox (0.1.0)
@@ -233,6 +237,7 @@ GRAPH
     tmuxomatic (>= 0.0.0)
     vagrant (>= 0.0.0)
     vim (>= 0.0.0)
+    vim-jsbeautify (>= 0.0.0)
     vim-markdown (>= 0.0.0)
     virtualbox (>= 0.0.0)
     vlc (>= 0.0.0)

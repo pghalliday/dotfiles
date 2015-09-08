@@ -64,7 +64,6 @@ cespare/vim-toml
 groenewege/vim-less
 nathanaelkane/vim-indent-guides
 digitaltoad/vim-jade
-maksimr/vim-jsbeautify
 pangloss/vim-javascript
 }.each do |plugin|
   vim_plugin plugin do
@@ -73,6 +72,7 @@ pangloss/vim-javascript
 end
 syntastic workstation_user
 vim_markdown workstation_user
+vim_jsbeautify workstation_user
 base16_vim workstation_user
 
 # install tmux
