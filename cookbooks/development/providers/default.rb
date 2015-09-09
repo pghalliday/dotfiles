@@ -60,6 +60,17 @@ action :add do
     end
   end
   %w{
+    d4a-cloudui
+  }.each do |name|
+    project "LibertyGlobal/#{name}" do
+      user new_resource.user
+      cookbook 'development'
+      tmuxomatic "tmuxomatic/#{name}"
+      repository "git@github.com:LibertyGlobal/#{name}.git"
+      email 'pghalliday@gmail.com'
+    end
+  end
+  %w{
     crowd
     jira
     stash
