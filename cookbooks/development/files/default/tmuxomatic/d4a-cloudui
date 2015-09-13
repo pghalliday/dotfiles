@@ -13,8 +13,8 @@ FFFFFEDD
   foc
   dir ~/projects/LibertyGlobal/d4a-cloudui/
 A run vim README.md
-B run npm run watch-karma
-C run npm run watch-jshint
+B run npm run watch-test
+C run npm run watch-lint
 D run npm run watch-docs
 E run npm run livereload
 F run git status
