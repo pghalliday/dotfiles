@@ -44,7 +44,11 @@ if [ -n "$TRAVIS_BUILD_ID" ]; then
       ENCRYPTED_IV_VAR=encrypted_${ENCRYPTION_LABEL}_iv
       ENCRYPTED_KEY=${!ENCRYPTED_KEY_VAR}
       ENCRYPTED_IV=${!ENCRYPTED_IV_VAR}
+
+      # switch both git and https protocols as we don't know which travis
+      # is using today (it changed!)
       REPO=${REPO/git:\/\/github.com\//git@github.com:}
+      REPO=${REPO/https:\/\/github.com\//git@github.com:}
       
       # The `deploy_key.enc` file should have been added to the repo and should
       # have been created from the deploy private key using `travis encrypt-file`

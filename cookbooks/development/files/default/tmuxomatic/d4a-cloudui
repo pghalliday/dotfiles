@@ -2,14 +2,20 @@ window d4a-cloudui
 
 AAAAAABB
 AAAAAABB
+AAAAAABB
 AAAAAACC
-DDDDDECC
+AAAAAACC
+AAAAAACC
+AAAAAADD
+FFFFFEDD
+FFFFFEDD
 
   foc
   dir ~/projects/LibertyGlobal/d4a-cloudui/
 A run vim README.md
 B run npm run watch-karma
 C run npm run watch-jshint
-D run git status
-E run npm run watch-coverage
+D run npm run watch-docs
+E run npm run livereload
+F run git status
 A foc
